@@ -87,3 +87,323 @@ footer{
     background-color: rgb(9, 9, 9);
     margin-top: 2px;    
 }
+
+.box-01 .entrar {
+    padding: 20px 70px;
+    background: #00bcd4;
+    margin: 0 auto;
+    color: #fff;
+    font: 20px "calibri";
+    display: table;
+    transition: all 0.5s;
+}
+.item {
+    width: 350px;
+    height: 290px;
+    margin: 5px 0px;
+    overflow: hidden;
+    position: relative;
+    visibility: hidden;
+}
+.item:hover{
+    background: rgb(10 111 165 / 56%);
+    transition: all 0.5s;
+}
+
+/*
+.box-01 .box .item .img {
+    width: 350px;
+    height: 290px;
+}
+.box-01 .box .item .img img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+.box-01 .box .item .titulo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font: 34px "calibri";
+    color: #fff;
+    font-weight: lighter;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgb(5 59 87 / 72%);
+    transition: all 0.5s;
+}
+.box-02-total {
+    background: #005099;
+    position: relative;
+}
+.box-02 {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box-02 .item {
+    margin: 20px 0px;
+    width: 311px;
+    box-sizing: border-box;
+    border: 2px solid rgba(251, 251, 251, 0.13);
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+.box-02 .item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.box-02 .item .img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #0a6fa5;
+}
+.box-02 .item .titulo {
+    font: 28px "calibri";
+    color: #fff;
+    margin: 40px 0px;
+}
+.box-02 .item .conteudo {
+    font: 18px/30px "calibri";
+    color: #fff;
+    margin: 40px 0px;
+}
+.box-02 .item .img i {
+    font-size: 60px;
+    color: #fff;
+}
+.box-02 .entrar {
+    padding: 20px 70px;
+    background: #00bcd4;
+    margin: 0 auto;
+    color: #fff;
+    font: 20px "calibri";
+    display: table;
+    transition: all 0.5s;
+}
+.box-03-total {
+    padding: 40px 0px;
+}
+.box-03 {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box-03 .item {
+    width: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.box-03 .item:first-child {
+    width: 390px;
+    overflow: hidden;
+    padding: 0px 50px;
+}
+.box-03 .item .titulo {
+    font: 40px "calibri";
+    font-weight: lighter;
+    color: #053957;
+    margin-bottom: 30px;
+}
+.box-03 .item .titulo span {
+    font: 22px "calibri";
+    font-weight: lighter;
+    color: #0a6fa5;
+    display: block;
+}
+.box-03 .item .conteudo {
+    font: 20px/30px "calibri";
+    color: #999999;
+    margin-bottom: 30px;
+}
+.box-03 .item .entrar {
+    font: 22px "calibri";
+    font-weight: lighter;
+    color: #fff;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    display: table;
+    background: #0a6fa5;
+    transition: all 0.5s;
+}
+.box-03 .item .entrar:hover {
+    background: #053957;
+    color: #fff;
+    transition: all 0.5s;
+}
+.box-04-total {
+    background: url("../pw-images/empresa-de-jovem-aprendiz.jpg");
+    background-size: cover;
+    padding: 20px 0px;
+}
+.box-04 {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box-04 .item {
+    width: 500px;
+    margin: 20px 0px;
+}
+.box-04 .item > .titulo {
+    font: 34px "calibri";
+    font-weight: lighter;
+    color: #053957;
+    margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
+}
+.box-04 .item > .titulo span {
+    font: 22px "calibri";
+    font-weight: lighter;
+    color: #0a6fa5;
+    display: block;
+}
+.box-04 .item .contato {
+    padding: 0px 10px;
+}
+.item {
+    font-size: 15px;
+    color: black;
+}
+/*GALERIA
+.titulo-galeria-pages {
+    display: flex;
+    justify-content: center;
+    background: #005099;
+    padding: 8px 0px;
+}
+.conteudo-galeria-linha hr {
+    height: 4px;
+    background-color: #0a6fa557;
+    border: none;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+.titulo-galeria-pages h2 {
+    font: 35px calibri;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.exibir-fotos {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0px 350px;
+}
+.botao-fotos {
+    margin-bottom: 20px;
+    background: #0a6fa5;
+    padding: 15px 140px;
+    font-size: 22px;
+    font-family: calibri;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+}
+i.fas.fa-angle-down {
+    color: white;
+}
+.botao-videos {
+    margin-bottom: 20px;
+    background: #0a6fa5;
+    padding: 15px 140px;
+    font-size: 22px;
+    font-family: calibri;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+}
+.gallery.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+.gallery.fotos img {
+    margin: 4px;
+    box-shadow: 6px 0px 10px 3px #456c7e;
+}
+.galeria {
+    padding: 35px 88px;
+}
+
+/* Galeria 
+.galeria {
+    width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.foto-gallery {
+    border: 1px solid #dedede;
+    margin: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.foto-gallery img {
+    width: 100%;
+    height: auto;
+}
+.foto-gallery:hover {
+    box-shadow: 0px 0px 10px 1px #ddd;
+    transition: 0.5s;
+}
+.foto-gallery p {
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    text-shadow: 0px 0px 1px #000;
+    font-weight: bold;
+    background: #1180b1c9;
+    padding: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    bottom: 0;
+    position: absolute;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.5s;
+    display: none;
+}
+.foto-gallery:hover p {
+    height: 70px;
+    transition: 0.5s;
+}
+.foto-gallery.total {
+    width: 250px;
+    height: 400px;
+}
+*/
