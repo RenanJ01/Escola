@@ -2,13 +2,13 @@ body{
   background-color: Gray;
   font-family: 'Times New Roman', Times, serif;
   scroll-behavior: smooth;
-  margin: 0%;
+  margin: 0px;
   padding: 0px;
   border: 0px;
 }
 
 header{
-    background-color: Green;
+    background-color: rgb(48, 219, 48);
     height: 100px;
 }
 header h1{
