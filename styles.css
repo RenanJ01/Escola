@@ -53,7 +53,7 @@ nav ul li a:hover {
 
 section{
     background-color: green;
-    height: 600px;
+    height: 300px;
     width: 100%;
     padding-top: 150px;
 }
@@ -88,15 +88,6 @@ footer{
     margin-top: 2px;    
 }
 
-.box-01 .entrar {
-    padding: 20px 70px;
-    background: #00bcd4;
-    margin: 0 auto;
-    color: #fff;
-    font: 20px "calibri";
-    display: table;
-    transition: all 0.5s;
-}
 .item {
     width: 350px;
     height: 290px;
@@ -110,11 +101,11 @@ footer{
     transition: all 0.5s;
 }
 
-/*
-.box-01 .box .item .img {
+.img {
     width: 350px;
     height: 290px;
 }
+/*
 .box-01 .box .item .img img {
     width: 100%;
     height: auto;
