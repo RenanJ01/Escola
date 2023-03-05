@@ -84,8 +84,7 @@ section div.gallery {
 section div.gallery:hover {
     border: 1px solid #777;
 }  
-section div.gallery img {
-    width: 100%;
+section div.gallery img {   
     height: auto;
 }
 
