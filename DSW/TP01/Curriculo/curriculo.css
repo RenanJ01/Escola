@@ -87,7 +87,7 @@ section table{
     border: 0;
     width: 100%;
 }
-section table td{
+section table tr td{
     background-color: burlywood;
     width: 50%;
 }
