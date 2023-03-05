@@ -9,7 +9,7 @@ body{
 
 header{
     background-color: coral;
-    padding: 5px;
+    padding-bottom: 14px;
     height: 100px;
     top: 0;
     overflow: hidden;
@@ -26,6 +26,7 @@ header p{
 }
 header div{
     display: block;
+    float: left;
 }
 
 nav{
@@ -60,6 +61,7 @@ nav ul li a:hover {
 }
 #helogo{
     float: right;
+    margin-bottom: 15px;
 }
 
 section{
