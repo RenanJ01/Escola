@@ -84,6 +84,9 @@ section table{
     margin: 0px 10px;
     width: 40%;
 }
+td.colunaE div {
+    margin: 0 10px;
+}
 td.colunaE h1,h2,h3,h4,h5,h6{
     color: white;
 }
@@ -91,16 +94,21 @@ td.colunaE p{
     color: white;
 }
 td.colunaE h2,h3,h4,h5,h6{
-    border-radius: 35px 5px 5px 5px;
     padding: 25px;
     background-color: rgb(11, 0, 96)
 }
+td.colunaD h2, h3{
+    color: white;
+    font-stretch: semi-condensed;
+    margin: 0 -10px;
+    padding: 4px;
+    background-color: rgb(11, 0, 96);
+}
 td.colunaE img{
     border: 3px solid #fff;
-    border-radius: 25%;
     height: auto;
     overflow: hidden;
-    width: 60px;
+    width: 95%;
 }
 
 
