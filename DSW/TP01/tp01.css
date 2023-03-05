@@ -74,14 +74,19 @@ section h1, h2, h3, h4, h5, h6{
     color: white;
     margin: 0px 10px;
 }
+.prim{
+    padding-top: 150px;
+}
 
 section div.gallery {
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
-    width: 40px;
 }
-section div.gallery:hover {
+section div.gallery img{
+    width: 20px;
+}
+section div.gallery img:hover {
     border: 1px solid #777;
 }
 
