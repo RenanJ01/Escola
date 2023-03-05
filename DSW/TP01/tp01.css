@@ -11,11 +11,13 @@ header{
     background-color: coral;
     padding: 5px;
     height: 100px;
+    top: 0;
+    float: left;
 }
 header h1{
     color: whitesmoke;
     text-align: left;
-    font-size: 200%;
+    font-size: xx-large;
 }
 header p{
     color: orangered;
@@ -23,7 +25,8 @@ header p{
     font-style: italic;        
 }
 header div{
-    display: inline-block;
+    display: block;
+    float: right;
 }
 
 nav{
