@@ -63,7 +63,7 @@ nav ul li a:hover {
 
 section{
     background-color:rgb(206, 91, 49);
-    height: 300px;
+    height: auto;
     width: 100%;
 }
 section p{
@@ -79,13 +79,10 @@ section div.gallery {
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
-    width: 80px;
+    width: 40px;
 }
 section div.gallery:hover {
     border: 1px solid #777;
-}  
-section div.gallery img {   
-    height: auto;
 }
 
 footer{
