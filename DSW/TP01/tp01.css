@@ -54,6 +54,7 @@ nav ul li a:hover {
 #menuSps{
     position: fixed;
     width: 100%;
+    padding-bottom: 150px;
 }
 #helogo{
     float:right;
@@ -62,9 +63,8 @@ nav ul li a:hover {
 
 section{
     background-color:rgb(206, 91, 49);
-    height: 600px;
+    height: 300px;
     width: 100%;
-    padding-top: 150px;
 }
 section p{
     color: black;
@@ -74,7 +74,7 @@ section h1, h2, h3, h4, h5, h6{
     color: white;
     margin: 0px 10px;
 }
-/*
+
 section div.gallery {
     margin: 5px;
     border: 1px solid #ccc;
@@ -88,7 +88,6 @@ section div.gallery img {
     width: 100%;
     height: auto;
 }
-*/
 
 footer{
     height: 200px;
