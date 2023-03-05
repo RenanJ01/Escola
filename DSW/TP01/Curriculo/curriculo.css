@@ -64,9 +64,14 @@ nav ul li a:hover {
 }
 
 section{
-    height: 600px;
+    height: auto;
     width: 100%;
-    padding-top: 150px;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+.prim{
+    padding-top: 138px;
 }
 section p{
     color: black;
@@ -76,25 +81,19 @@ section h1, h2, h3, h4, h5, h6{
     color: white;
     margin: 0px 10px;
 }
-/*
-section div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 180px;
-}
-section div.gallery:hover {
-    border: 1px solid #777;
-}  
-section div.gallery img {
+section table{
+    margin: 0px;
+    padding:0;
+    border: 0;
     width: 100%;
-    height: auto;
 }
-*/
+section table td{
+    background-color: burlywood;
+    width: 50%;
+}
 
 footer{
     height: 200px;
     width: 100%;
-    background-color: rgb(9, 9, 9);
-    margin-top: 2px;    
+    background-color: rgb(9, 9, 9);     
 }
