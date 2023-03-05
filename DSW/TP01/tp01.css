@@ -12,7 +12,6 @@ header{
     padding: 5px;
     height: 100px;
     top: 0;
-    float: left;
 }
 header h1{
     color: whitesmoke;
@@ -26,7 +25,6 @@ header p{
 }
 header div{
     display: block;
-    float: right;
 }
 
 nav{
@@ -60,8 +58,7 @@ nav ul li a:hover {
     padding-bottom: 150px;
 }
 #helogo{
-    float:right;
-    margin-right: 30px;
+    float: right;
 }
 
 section{
