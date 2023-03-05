@@ -12,6 +12,7 @@ header{
     padding: 5px;
     height: 100px;
     top: 0;
+    overflow: hidden;
 }
 header h1{
     color: whitesmoke;
