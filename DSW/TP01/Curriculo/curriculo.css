@@ -136,15 +136,12 @@ td.colunaE img {
 
 td.colunaE meter {
     width: 100%;
-}
-
-td.colunaE meter::-webkit-meter-optimum-value {
     background-image: linear-gradient(90deg,
             #000000 75%,
             #616161 100%);
 }
 
-td.colunaE meter.meterInterro::-webkit-meter-optimum-value {
+td.colunaE meterInterro{
     background-image: linear-gradient(90deg,
             #616161 15%,
             #000000 45%,
