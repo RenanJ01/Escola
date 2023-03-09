@@ -134,20 +134,8 @@ td.colunaE img {
     width: 95%;
 }
 
-td.colunaE meter {
+td.colunaE progress {
     width: 100%;
-    background-image: linear-gradient(90deg,
-            #000000 75%,
-            #616161 100%);
-}
-
-td.colunaE meterInterro{
-    background-image: linear-gradient(90deg,
-            #616161 15%,
-            #000000 45%,
-            #616161 69%,
-            #000000 89%,
-            #616161 100%);
 }
 
 /* Coluna Direita */
