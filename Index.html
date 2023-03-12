@@ -1,48 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" type="image/ico" href="\Escola/Imagens/title.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Menu Principal - Escola</title>
 </head>
+
 <body>
+
+    <!-- Cabeçalho da Página -->
     <header>
-        <div>
+        <!-- Cabeçalho - Menu -->
+        <nav>
+            <div class="ctn_nav">
+                <div class="grupoBot">
+
+                    <a href="#inicio" class="btn_nav_menu">
+                        <span class="pp-button-title"> Inicio </span>
+                    </a>
+                    <a href="DSW/menuSub.html" class="btn_nav_menu">
+                        <span class="pp-button-title"> DSW </span>
+                    </a>
+                    <a href="TDS/menuSub.html" class="btn_nav_menu">
+                        <span class="pp-button-title"> TDS </span>
+                    </a>
+                    <a href="SIN/menuSub.html" class="btn_nav_menu">
+                        <span class="pp-button-title"> SIN </span>
+                    </a>
+                    <a href="PJSI/menuSub.html" class="btn_nav_menu">
+                        <span class="pp-button-title"> PJS/I </span>
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Cabeçalho - Titulo -->
+        <div class="ctn_title">
             <h1>Menu Principal - Escola</h1>
             <p> Matérias: DSW, TDS, SIN e PJS/I </p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#incio" target="_self">Inicio</a></li>
-                <li><a href="DSW/menuSub.html" target="_self">DSW4</a></li>
-            </ul>
-        </nav>
+        
     </header>
-    
+    <br>
+
+    <!-- Principal - Menu - Titulo -->
     <main>
         <section>
-            <a name="inicio"><h2>Menu Principal - Escola</h2></a>
-            <p></p>
+            <a name="inicio">
+                <h2>Menu Principal - Escola</h2><br>
+            </a>
+            <video src="" autoplay="" ></video>
+            <br>
         </section>
 
+        <!-- Listagem dos SubMenus -->
         <section class="Menus">
-            <a href="\DSW/menuSub.html">
-                <div class="item">
-                    <div class="img">
-                        <img src="\Imagens/dswlogo.png" title="DSW">
-                    </div>
-                </div>
-            </a><br>
-            <a href="\TDS/menuSub.html"><img src="#" alt="TDS"></a><br>
-            <a href="\SIN/menuSub.html"><img src="#" alt="SIN"></a><br>
-            <a href="\PJ/menuSub.html"><img src="#" alt="PJs"></a><br>
+            <a href="\DSW/menuSub.html">DSW</a><br>
+            <a href="\TDS/menuSub.html">TDS</a><br>
+            <a href="\SIN/menuSub.html">SIN</a><br>
+            <a href="\PJSI/menuSub.html">PJS/I</a><br>
         </section>
+        <br><br>
     </main>
 
-    <footer>
+    <!-- Rodapé da Pagina -->
+    <footer class="main_footer container">
+        <div class="content">
+
+            <!-- Menu -->
+            <div class="colfooter">
+
+                <h3 class="titleFooter">Menu</h3>
+
+                <ul>
+                    <li><a href="Index.html" title="Página Inícial" target="_self">Página Inícial</a></li>
+                    <li><a href="\Escola/DSWmenuSub.html" title="Desenvolvimento Web" target="_self">DSW</a></li>
+                    <li><a href="\Escola/TDS/menuSub.html" title="Teoria do Desenvolvimento de Sistema" target="_self">TDS</a></li>
+                    <li><a href="\Escola/SIN/menuSub.html" title="Teoria do Desenvolvimento de Sistema" target="_self">SIN</a></li>
+                    <li><a href="\Escola/PJSI/menuSub.html" title="Projeto de Sistemas/Integrador" target="_self">PJS/I</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Contato -->
+            <div class="colfooter">
+
+                <h3 class="titleFooter">Contato</h3>
+
+                <p><i class="fa fa-envelope"></i> contato@gmail.com.br</p>
+                <p><i class="fa fa-phone"></i> 11 99999-9999</p>
+                <p><i class="fa fa-whatsapp"></i> 11 99999-9999</p>
+
+            </div>
+
+            <!-- Rede Sociais -->
+
+            <div class="colfooter">
+
+                <h3 class="titleFooter"> Redes Sociais</h3>
+
+                <a href="#" class="botao"><span> <i class="fa fa-facebook"></i> </span></a>
+                <a href="#" class="botao"><span> <i class="fa fa-instagram"></i> </span></a>
+                <a href="#" class="botao"><span> <i class="fa fa-twitter"></i> </span></a>
+                <a href="#" class="botao"><span> <i class="fa fa-pinterest"></i> </span></a>
+            </div>
+
+        </div>
+        <div class="main_footer_copy">
+
+            <p class="m-b-footer"> TP - Curriculos - 2022, todos os direitos reservados.</p>
+            <p class="by">Desenvolvido por: <a href="#" title="Jonatas Renan">Jonatas Renan</a></p>
+
+        </div>
 
     </footer>
+
 </body>
 </html>
