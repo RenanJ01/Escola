@@ -111,8 +111,17 @@ h6 {
 }
 
 /*Section - Menu*/
+section{
+    vertical-align: middle;
+}
+
 .Menu{
-    vertical-align: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.group_section_menu{
+    text-align: -webkit-center;
 }
 
 .btn_section_menu {
@@ -121,7 +130,7 @@ h6 {
     display: table-cell;
     font-size: 4em;
     font-weight: bold;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     font-family: 'open_sansregular';
     border: 2px solid #0097ff;
@@ -153,7 +162,7 @@ footer {
 .main_footer .content {
     float: left;
     width: 90%;
-    margin: 0 5%;
+    margin: 0 10px;
     padding: 10px 0;
 }
 .container {
