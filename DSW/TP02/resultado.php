@@ -1,74 +1,71 @@
 <?php
-  // define variables and set to empty values
-  $nameErr = $emailErr = $genderErr = $websiteErr = "";
-  $name = $email = $gender = $comment = $website = "";
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["name"])) {
-      $nameErr = "Name is required";
-    } else {
-      $name = test_input($_POST["name"]);
-    }
-
-    if (empty($_POST["email"])) {
-      $emailErr = "Email is required";
-    } else {
-      $email = test_input($_POST["email"]);
-    }
-
-    if (empty($_POST["website"])) {
-      $website = "";
-    } else {
-      $website = test_input($_POST["website"]);
-    }
-
-    if (empty($_POST["comment"])) {
-      $comment = "";
-    } else {
-      $comment = test_input($_POST["comment"]);
-    }
-
-    if (empty($_POST["gender"])) {
-      $genderErr = "Gender is required";
-    } else {
-      $gender = test_input($_POST["gender"]);
-    }
-  }
-
-  function test_input($data)
-  {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-  }
-
-  echo "<h2>Your Input:</h2>";
-  echo $name;
-  echo "<br>";
-  echo $email;
-  echo "<br>";
-  echo $website;
-  echo "<br>";
-  echo $comment;
-  echo "<br>";
-  echo $gender;
-  ?>
+  // Definir as variaveis
+  $nameErr = $emailErr = $genderErr = $idadeErr = "";
+  $name = $email = $gender = $idade = "";
   
-<!DOCTYPE html>
-<html lang="en">
+  // Inserção das variaveis
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["fname"])) {
+    $nameErr = "Nome é requisitada.";
+    } else {
+    $name = test_input($_POST["fname"]);
+    }
 
+    if (empty($_POST["femail"])) {
+      $emailErr = "Email é requisitada.";
+    } else {
+      $email = test_input($_POST["femail"]);
+    }
+
+    if (empty($_POST["fidade"])) {
+      $idadeErr = "Idade é requisitada.";
+    } else {
+      $idade = test_input($_POST["fidade"]);
+    }
+
+    if (empty($_POST["fgenero"])) {
+      $genderErr = "Genero é requisitada.";
+    } else {
+      $gender = test_input($_POST["fgenero"]);
+    }
+  }
+
+  function test_input($data){
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+  }
+?>
+
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>TP - Formulario</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="tp02.css">
+    <title>TP - Formulario - Resultado</title>
 </head>
 
 <body>
-  
+    <?php
+      echo "<h2>Informações:</h2>";
+      echo $name;
+      echo "<br>";
+      echo $email;
+      echo "<br>";
+      echo $idade;
+      echo "<br>";
+      echo $gender;
+    ?>
+    <br><br>
 
+    <footer>
+        <p class="ftr_direitos"> TP - Curriculos - 2022, todos os
+            direitos reservados.</p>
+        <p class="ftr_autor">Desenvolvido por: <a href="#" title="Jonatas e Eriel">Jonatas Renan e Eriel</a></p>
+    </footer>
 </body>
 
 </html>
