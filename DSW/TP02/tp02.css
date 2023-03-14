@@ -49,15 +49,15 @@ header .hdr_ctn_img{
 
 /*Cabeçalho - Menu*/
 nav {
-    background-color: #ffffff;
+    background-color: #fff;
     width: 90%;
     overflow: hidden;
-    border: 1px solid black;
+    border: 2px solid var(--e-global-color-4);
     vertical-align: top;
     height: 3em;
     position: absolute;
-    border-radius: 11px;
-    margin: 0 auto;
+    border-radius: 20px;
+    margin: 10px 0px;
 }
 
 .ctn_nav {
@@ -108,6 +108,32 @@ nav {
     width: 100%;
     padding: 0 10px;
 }
+
+/* Main da Página */
+main{
+    width: 100%;
+}
+
+/* Seção */
+section{
+    margin-left: 10px;
+}
+
+section h1, h2, h3{
+    color: var(--e-global-color-1);
+    font-weight: bold;
+    border-bottom: 2px var(--e-global-color-4) solid;
+}
+
+section p{
+    color: black;
+    font-weight: bold;
+}
+/* Seção - Titulo */
+
+
+/* Seção - Formulario */
+
 
 /*Rodapé da Página*/
 footer{
