@@ -1,0 +1,143 @@
+body {
+    background-color: var(--e-global-color-2);
+    font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+/* Variaveis Globais */
+*{
+    --e-global-color-1: #A8230C;
+    --e-global-color-2: #FF5A3D;
+    --e-global-color-3: #F54222;
+    --e-global-color-4: #009958;
+    --e-global-color-5: #51E8A8;
+}
+
+/*Cabeçalho da Página*/
+header {
+    background-color: var(--e-global-color-4);
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    display: grid;
+    justify-items: center;
+}
+
+header h1 {
+    color: whitesmoke;
+    text-align: left;
+    font-size: 200%;
+}
+
+header p {
+    color: var(--e-global-color-4);
+    text-align: left;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*Cabeçalho - Imagem*/
+header .hdr_img{
+    width: 100%;
+}
+header .hdr_ctn_img{
+    display: contents;
+}
+
+/*Cabeçalho - Menu*/
+nav {
+    background-color: #ffffff;
+    width: 90%;
+    overflow: hidden;
+    border: 1px solid black;
+    vertical-align: top;
+    height: 3em;
+    position: absolute;
+    border-radius: 11px;
+    margin: 0 auto;
+}
+
+.ctn_nav {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.grupoBot {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.btn_nav_menu {
+    padding: 8px 25px;
+    letter-spacing: 2px;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'open_sansregular';
+    border: 1px solid #00ccff;
+    border-radius: 3px;
+    overflow: hidden !important;
+    background: #00ccff;
+    vertical-align: middle;
+    transition: padding 1s, transform 1s, background 1s;
+}
+
+.btn_nav_menu:hover {
+    padding: 7px 23px;
+    border: 1px solid #006aff;
+    color: #000000;
+    background: #001eff;
+}
+
+.btn_title{
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*Title - Cabeçalho*/
+.ctn_title {
+    width: 100%;
+    padding: 0 10px;
+}
+
+/*Rodapé da Página*/
+footer{
+    text-decoration: none;
+    width: 100%;
+    background-color: #A82008;
+    float: left;
+    text-align: center;
+    padding: 1em 0em;
+}
+footer p{
+    font-family:2 'open_sanslight';
+    font-size: 1em;
+    color: #e1e0e0;
+    height: 20px;
+}
+
+footer .ftr_direitos {
+    margin-bottom: 0.5em;
+}
+
+footer .ftr_autor {
+    font-size: 0.96em;
+}
+
+footer .ftr_autor a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .ftr_autor a:hover {
+    text-decoration: underline;
+}
