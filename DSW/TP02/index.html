@@ -13,10 +13,14 @@
 <body>
     <header>
         
-        <nav>
-            <ul>
-                <li></li>
-            </ul>
+        <nav class="nav_menu" id="nav_menu">
+            <a href="" class="active">Home</a>
+            <a href="">SubMenu - DSW</a>
+            <a href="">Formulario - Questão</a>
+            <a href="">Formulario - Resposta</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
 
         <div class="hdr_ctn_img">
@@ -34,7 +38,7 @@
             <h2>Formulario</h2>
 
             <form action="resultado.php" method="post">
-                <fieldset>
+                <fieldset class="fld_form">
                     <label for="name">Nome:</label><br>
                     <input type="text" id="name" name="fname" value="Ronaldo" required><br><br>
 
@@ -44,6 +48,7 @@
                     <input type="radio" id="genero" name="fgenero" value="Feminino"><label
                         for="fem">Feminino</label><br>
                     <input type="radio" id="genero" name="fgenero" value="Outro"><label for="out">Outro</label><br><br>
+
                     <label for="email">E-mail:</label><br>
                     <input type="email" id="email" name="femail" value="exemplo@gmail.com" required><br><br>
 
@@ -51,14 +56,13 @@
                     <input type="number" id="idade" name="fidade" value="1" min="0" max="200" required><br><br>
 
                     <label for="jogo">Qual destes games você já jogou:</label><br>
-                    <input type="checkbox" id="jogo" name="ffortnite" value="Fortnite"><label
+                    <input type="checkbox" id="jogo" name="fjogo" value="Fortnite"><label
                         for="jogo">Fortnite</label><br>
-                    <input type="checkbox" id="jogo" name="fleague of
-                            Legends" value="League of Legends"><label for="jogo">League of Legends</label><br>
-                    <input type="checkbox" id="jogo" name="fcrossfire" value="Crossfire"><label
+                    <input type="checkbox" id="jogo" name="fjogo" value="League of Legends"><label for="jogo">League of Legends</label><br>
+                    <input type="checkbox" id="jogo" name="fjogo" value="Crossfire"><label
                         for="jogo">CrossFire</label><br>
-                    <input type="checkbox" id="jogo" name="froblox" value="Roblox"><label for="jogo">Roblox</label><br>
-                    <input type="checkbox" id="jogo" name="fpubg" value="PUBG"><label for="jogo">PUBG</label><br><br>
+                    <input type="checkbox" id="jogo" name="fjogo" value="Roblox"><label for="jogo">Roblox</label><br>
+                    <input type="checkbox" id="jogo" name="fjogo" value="PUBG"><label for="jogo">PUBG</label><br><br>
                     <!-- 
                 <label>Selecione uma das opções:</label><br>
                 <select id="cars" name="cars">

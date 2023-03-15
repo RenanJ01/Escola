@@ -59,48 +59,46 @@ nav {
     border-radius: 20px;
     margin: 10px 0px;
 }
-
-.ctn_nav {
-    width: 100%;
-    padding: 0px 10px;
-}
-
-.grupoBot {
-    width: 100%;
-    height: auto;
+nav.nav_menu a {
     float: left;
-}
-
-.btn_nav_menu {
-    padding: 8px 25px;
-    letter-spacing: 2px;
-    position: relative;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 0.85em;
-    font-weight: bold;
-    color: #ffffff;
-    text-align: center;
-    font-family: 'open_sansregular';
-    border: 1px solid #00ccff;
-    border-radius: 3px;
-    overflow: hidden !important;
-    background: #00ccff;
-    vertical-align: middle;
-    transition: padding 1s, transform 1s, background 1s;
+    font-size: 17px;
 }
 
-.btn_nav_menu:hover {
-    padding: 7px 23px;
-    border: 1px solid #006aff;
-    color: #000000;
-    background: #001eff;
+nav.nav_menu a:hover {
+    background-color: #04AA6D;
+    color: white;
 }
 
-.btn_title{
-    text-align: center;
-    vertical-align: middle;
+nav.nav_menu icon{
+  display: none;
+}
+
+@media screen{
+  .nav_menu a:not(:first-child) {display: none;}
+  .nav_menu a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the nav_menu with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen {
+  .nav_menu.responsive {position: relative;}
+  .nav_menu.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav_menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 /*Title - Cabeçalho*/
@@ -133,7 +131,11 @@ section p{
 
 
 /* Seção - Formulario */
-
+.fld_form{
+    border: 2px solid var(--e-global-color-5);
+    border-style: groove;
+    box-shadow: -6px 4px 8px 0px var(--e-global-color-1);
+}
 
 /*Rodapé da Página*/
 footer{
