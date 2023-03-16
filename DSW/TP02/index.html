@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -13,16 +13,24 @@
 <body>
     <header>
         
-        <nav class="nav_menu" id="nav_menu">
-            <a href="" class="active">Home</a>
-            <a href="">SubMenu - DSW</a>
-            <a href="">Formulario - Questão</a>
-            <a href="">Formulario - Resposta</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
+        <nav class="nav_menu" id="topnav">
+            <a href="#" class="active">Home</a>
+            <a href="\DSW/menuSub.html">SubMenu - DSW</a>
+            <a href="#form_quest">Formulario - Questão</a>
+            <a href="resultado.php">Formulario - Resposta</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i>
             </a>
         </nav>
-
+        <script>
+            function myFunction() {
+                var x = document.getElementById("topnav");
+                if (x.className === "nav_menu") {
+                  x.className += " responsive";
+                } else {
+                  x.className = "nav_menu";
+                }
+              }
+        </script>
         <div class="hdr_ctn_img">
             <img class="hdr_img" src="img/hdr_img.jpg" alt="Cidade Urbana">
         </div>
@@ -35,7 +43,7 @@
         </section>
         <br>
         <section>
-            <h2>Formulario</h2>
+            <a id="form_quest" ><h2>Formulario</h2>
 
             <form action="resultado.php" method="post">
                 <fieldset class="fld_form">
