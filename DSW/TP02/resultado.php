@@ -65,8 +65,8 @@ function test_input($data)
         <nav class="nav_menu" id="topnav">
             <a href="#" class="active">Home</a>
             <a href="\DSW/menuSub.html">SubMenu - DSW</a>
-            <a href="#form_quest">Formulario - Questão</a>
-            <a href="resultado.php">Formulario - Resposta</a>
+            <a href="index.html">Formulario - Questão</a>
+            <a href="#form_rest">Formulario - Resposta</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i>
             </a>
         </nav>
@@ -89,7 +89,7 @@ function test_input($data)
 
     <section>
         <?php
-    echo "<h2>Informações:</h2>
+    echo "<a id='form_rest'><h2>Informações:</h2></a>
       <p>Nome: $name<br>
       E-mail: $email<br>
       Idade: $idade anos<br>
