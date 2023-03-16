@@ -1,8 +1,8 @@
 <?php
 // Definir as variaveis
 $nameErr = $emailErr = $genderErr = $idadeErr = $jogosErr = "";
-$name = $email = $gender = $idade = $jogos = "";
-$numjg = 0;
+$name = $email = $gender = $idade = "";
+$jogos[5] = "";
 
 // Inserção das variaveis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -11,17 +11,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $name = test_input($_POST["fname"]);
   }
-
   if (empty($_POST["femail"])) {
     $emailErr = "Email é requisitada.";
   } else {
     $email = test_input($_POST["femail"]);
   }
-  if (empty($_POST["fjogo"])) {
-    $jogosErr = "";
-  } else {
-    $jogos = test_input($_POST["fjogo"]);
+  for ($i=0; $i < 5; $i++) { 
+    if (empty($_POST["fjogo"])) {
+      $jogosErr = "";
+    } else {
+      $jogos[$i] = test_input($_POST["fjogo"]);
+    }
   }
+  
+
   if (empty($_POST["fidade"])) {
     $idadeErr = "Idade é requisitada.";
   } else {
@@ -52,6 +55,7 @@ function test_input($data)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="tp02.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>TP - Formulario - Resultado</title>
 </head>
 
@@ -93,10 +97,10 @@ function test_input($data)
       Jogos: $jogos<br>
       </p>"
     ?>
-        <br><br>
-        <?php
+    <br><br>
+    <?php
     echo "<h2>Jogos:</h2>"  
-
+    
     ?>
     </section>
     <footer>
