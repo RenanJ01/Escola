@@ -2,13 +2,8 @@
 // Definir as variaveis
 $nameErr = $emailErr = $genderErr = $idadeErr = "";
 $name = $email = $gender = $idade = "";
-$jogos = null;/*
-$jogos[0] = "arroz";
-$jogos[1] = "arro";
-$jogos[2] = "arr";
-$jogos[3] = "ar";
-$jogos[4] = "a";
-*/
+$jogos = null;
+
 // Inserção das variaveis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["fname"])) {
@@ -40,6 +35,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 
+/*Verificação dos Valores das variaveis*/
+if($name==""){
+	$name = "Desconhecido";
+}
+if($email==""){
+	$email = "Desconhecido";
+}
+if($idade==""){
+	$idade = 0;
+}
+if($gender==""){
+	$gender = "Desconhecido";
+}
+
+/*Funções de Segurança na Inserção*/	
 function test_input($data)
 {
   $data = trim($data);
@@ -107,12 +117,17 @@ function test_input_array($data)
 			E-mail: $email<br>
 			Idade: $idade anos<br>
 			Genero: $gender<br></p><br>
-			<h2>Jogos já jogados:</h2>
-			<p>";
+			<h2>Jogos já jogados:</h2>";
+			
+      if($jogos==""){
+        echo "<p> Nenhum jogo foi selecionado.";
+      }else{
+        echo "<p>";
 			for ($ii=0; $ii < count($jogos); $ii++) { 
 				echo $jogos[$ii]."<br>";
 			}
-			echo "</p><br>";
+    }
+      echo "</p><br>";
 		?>
     </section>
     <footer>
