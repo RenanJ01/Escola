@@ -2,11 +2,12 @@
 // Definir as variaveis
 $nameErr = $emailErr = $genderErr = $idadeErr = "";
 $name = $email = $gender = $idade = "";
-$jogos = array(5);/*
-$jogos[0] = arroz;
-$jogos[1] = arro;
-$jogos[2] = arr;
-$jogos[3] = ar;
+$jogos = null;/*
+$jogos[0] = "arroz";
+$jogos[1] = "arro";
+$jogos[2] = "arr";
+$jogos[3] = "ar";
+$jogos[4] = "a";
 */
 // Inserção das variaveis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -20,13 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $email = test_input($_POST["femail"]);
   }
-  for ($ii=1; $ii < 6; $ii++) { 
-    if (empty($_POST["fjogo")) {
-      $jogos[$ii-1] = "";
+    if (empty($_POST["fjogo"])){
+      $jogos = "";
     } else {
-      $jogos[$ii-1] = test_input($_POST["fjogo"]);
+      $jogos = test_input_array($_POST["fjogo"]);
     }
-  }
+  
   if (empty($_POST["fidade"])) {
     $idadeErr = "Idade é requisitada.";
   } else {
@@ -45,6 +45,16 @@ function test_input($data)
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
+  return $data;
+}
+
+function test_input_array($data)
+{
+  for ($iii=0; $iii < count($data); $iii++) { 
+    $data[$iii] = trim($data[$iii]);
+    $data[$iii] = stripslashes($data[$iii]);
+    $data[$iii] = htmlspecialchars($data[$iii]);
+  }
   return $data;
 }
 ?>
@@ -92,15 +102,17 @@ function test_input($data)
     <section>
         <?php
 			echo "<a id='form_rest'><h2>Informações:</h2></a>
-			<p>Nome: $name<br>
+			<p>
+			Nome: $name<br>
 			E-mail: $email<br>
 			Idade: $idade anos<br>
-			Genero: $gender<br>
-			</p>
-			<br><br>";
-			for ($ii=0; $ii < 5; $ii++) { 
+			Genero: $gender<br></p><br>
+			<h2>Jogos já jogados:</h2>
+			<p>";
+			for ($ii=0; $ii < count($jogos); $ii++) { 
 				echo $jogos[$ii]."<br>";
 			}
+			echo "</p><br>";
 		?>
     </section>
     <footer>
