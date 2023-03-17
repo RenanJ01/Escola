@@ -102,7 +102,9 @@ footer{
   background-color: var(--global-color-3);
   float: left;
   text-align: center;
-  padding: 1em 0em;
+  padding: 1em 0em;  
+  bottom: 0;
+  position: absolute;
 }
 footer p{
   font-family:2 'open_sanslight';
