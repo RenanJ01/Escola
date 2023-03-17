@@ -1,0 +1,129 @@
+body{
+    background-color: var(--global-color-1);
+    font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+    margin: 0%;
+    padding: 0px;
+    border: 0px;
+}
+
+*{
+  --global-color-1: #C9E0D6;
+  --global-color-2: #8AE6BE;
+  --global-color-3: #3A6150;
+  --global-color-4: #57615D;
+  --global-color-5: #9CADA6;
+}
+
+/* Cabeçalho da Página */
+header{
+  width: 100%;
+  background-color: var(--global-color-5);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ctn_titulo {
+  color: #1c1c1c;
+  padding: 10px;
+}
+
+.ctn_titulo p{
+  font-style: italic;
+  font-stretch: semi-condensed;
+}
+
+/* Principal da Página */ 
+main{
+  width: 100%;
+  text-align: center;
+}
+
+/* Seções */
+section h1, h2, h3{
+  font-weight: bold;
+  color: #000;
+}
+
+section p{
+  color: #1c1c1c;
+}
+
+.ctn_descr{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.ctn_group{
+  width: 100%;
+  height: auto;
+  float: left;
+  padding: 10px 10px;
+}
+
+.btn_tp {
+  padding: 8px 25px;
+    letter-spacing: 2px;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 10px 2px 0px;
+    font-size: 0.85em;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'open_sansregular';
+    border: 1px solid #3a6150;
+    border-radius: 3px;
+    overflow: hidden !important;
+    background: var(--global-color-4);
+    vertical-align: middle;
+    transition: padding 1s, transform 1s, background 1s;
+}
+
+.btn_tp:hover {
+  padding: 7px 23px;
+  border: 1px solid #8AE6BE;
+  color: #000000;
+  background: #32e698;;
+}
+
+.btn_title{
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*Rodapé da Página*/
+footer{
+  text-decoration: none;
+  width: 100%;
+  background-color: var(--global-color-3);
+  float: left;
+  text-align: center;
+  padding: 1em 0em;
+}
+footer p{
+  font-family:2 'open_sanslight';
+  font-size: 1em;
+  color: #e1e0e0;
+  height: 20px;
+}
+
+footer .ftr_direitos {
+  margin-bottom: 0.5em;
+}
+
+footer .ftr_autor {
+  font-size: 0.96em;
+}
+
+footer .ftr_autor a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .ftr_autor a:hover {
+  text-decoration: underline;
+}
