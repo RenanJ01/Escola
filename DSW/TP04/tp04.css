@@ -14,9 +14,16 @@ header{
     box-sizing: border-box;
     position: relative;
     float: left;
-    display: flex;
     justify-content: center;
     width: 30%;
+    overflow: auto;
+}
+
+/* Cabeçalho - Titulo */
+header h1{
+    color: #3a3a3a;
+    text-align: center;
+    font-style: italic;
 }
 
 /* Cabeçalho - Barra */
@@ -28,7 +35,6 @@ header{
     height: 100%;
     background-color: #92ffcc;
     position: fixed;
-    overflow: auto;
 }
 .hdr_bar li{
 
@@ -55,9 +61,25 @@ main{
     position: relative;
     float: right;
     display: flex;
-    justify-content: center;
     width: 70%;
+    background-color: #00f7ff;
 }
-/* Principal - Seção */
 
+/* Principal - Seção */
+section{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+section h1{
+
+}
+
+.scn_title{
+    background-color: #bdbbbb;
+}
 /* Rodape */
+footer{
+
+}
