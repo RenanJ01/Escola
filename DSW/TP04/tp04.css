@@ -7,6 +7,11 @@ body{
     margin: 0;
     padding: 0;
     border: 0;
+    scroll-behavior: smooth;
+}
+
+table{
+    border-collapse: collapse;
 }
 
 /* Cabeçalho */
@@ -15,7 +20,7 @@ header{
     float: left;
     display: flex;
     justify-content: center;
-    width: 30%;
+    width: 20%;
     overflow: auto;
 }
 
@@ -31,26 +36,23 @@ header h1{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 30%;
-    height: 80%;
-    background-color: #92ffcc;
+    width: 20%;
+    height: 100%;
+    background-color: #00ff88;
     position: fixed;
-}
-.hdr_bar li{
-
 }
 .bar_itens{
     display: block;
     color: #fff;
     padding: 8px 16px;
     text-decoration: none;
-    background-color: #63cc9b;
+    background-color: #56c692;
     transition: color, background-color;
-    transition-duration: 1s, 1s;
+    transition-duration: 2s, 1s;
 } 
 .bar_itens:hover{
     display: block;
-    color: #fff;
+    color: #000;
     padding: 8px 16px;
     background-color: #50505077;
 }
@@ -59,31 +61,50 @@ header h1{
 main{
     box-sizing: border-box;
     float: right;
-    width: 70%;
-    height: 80%;
-    background-color: #00f7ff;
-    overflow: auto;
-    display: flex;
+    width: 80%;
+    background-color: #74faff;
 }
 
 /* Principal - Seção */
 section{
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
     border: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-section h1{
+section h1, section h2, section h3, section h4, section h5, section h6{
+    /* margin: 5px 0; */
     text-align: center;
+    color: #000;
 }
 section p{
     text-align: left;    
     color: #000;
+    margin: 0;
 }
 
 .scn_title{
     background-color: #bdbbbb;
+    display: block;
 }
+
+.btn_auto{
+    background-color: #001026;
+    border: 0;
+    border-radius: 2px;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* .div_list .active{ */
+    /* margin: 5px 0; */
+    /* border: 1px solid #959595; */
+/* } */
 
 /* Rodape */
 footer {
@@ -92,14 +113,8 @@ footer {
     color: #fff;
     font-size: 0.875em;
     bottom: 0;
-    position: fixed;
-    height: 20%;
-}
-.main_footer .content {
-    float: left;
-    width: 90%;
-    margin: 0 5%;
-    padding: 10px 0;
+    position: relative;
+    z-index: 1;
 }
 .container {
     float: left;
