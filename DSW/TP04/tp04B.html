@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="tp04.css">
+    <link rel="icon" type="image/ico" href="\Escola/Imagens/title.ico"/>
+    <script type="text/javascript" src="tp04.js"></script>
+    <title>TP04 - Listas</title>
+</head>
+
+<body>
+    <table>
+        <td>
+            <header>
+                <ul class="hdr_bar">
+                    <h1>Menu</h1>
+                    <li><a class="bar_itens" href="tp04.html">Home</a></li>
+                    <li><a class="bar_itens" href="..//menuSub.html">SubMenu - DSW</a></li>
+                    <li><a class="bar_itens" href="tp04B.html">2 Aba</a></li>
+                </ul>
+            </header>
+
+            <main>
+                <section class="scn_title">
+                    <h1>TP04 - Listas</h1>
+                    <p>Nome: Jonatas Renan <br>
+                        Turma: CTII448</p>
+                    <br>
+                </section>
+
+                <section>
+                    <h2>Automóveis</h2>
+                    <p>veículo automotor destinado ao transporte de passageiros, com capacidade para até oito pessoas,
+                        exclusive o condutor.</p><br>
+                    <button class="btn_auto" id="btn_marcs" onclick="ListarMarcas(list_marcs)">Listar Marcas</button>
+                    <div class="div_list" id="div_list1"></div>
+                    <br>
+                </section>
+                <section>
+                    <h2>Volkswagen</h2>
+                    <p>Alguns dos seus atomeveis mais conhecidos.</p><br>
+                    <button class="btn_auto" id="btn_volks" onclick="ListarCarros('volks', '2', list_volks)">Listar
+                        Carros</button>
+                    <div class="div_list" id="div_list2"></div>
+                    <br>
+                </section>
+                <section>
+                    <h2>Chevrolet</h2>
+                    <p>Alguns dos seus atomeveis mais conhecidos.</p><br>
+                    <button class="btn_auto" id="btn_chevr" onclick="ListarCarros('chevr', '3', list_chevr)">Listar
+                        Carros</button>
+                    <div class="div_list" id="div_list3"></div>
+                    <br>
+                </section>
+                <section>
+                    <h2>Fiat</h2>
+                    <p>Alguns dos seus atomeveis mais conhecidos.</p><br>
+                    <button class="btn_auto" id="btn_fiat" onclick="ListarCarros('fiat', '4', list_fiat)">Listar
+                        Carros</button>
+                    <div class="div_list" id="div_list4"></div>
+                    <br>
+                </section>
+                <section>
+                    <h2>Ford</h2>
+                    <p>Alguns dos seus atomeveis mais conhecidos.</p><br>
+                    <button class="btn_auto" id="btn_ford" onclick="ListarCarros('ford', '5', list_ford)">Listar
+                        Carros</button>
+                    <div class="div_list" id="div_list5"></div>
+                    <br>
+                </section>
+                <section>
+                    <h2>Toyota</h2>
+                    <p>Alguns dos seus atomeveis mais conhecidos.</p><br>
+                    <button class="btn_auto" id="btn_toyota" onclick="ListarCarros('toyota', '6', list_toyota)">Listar
+                        Carros</button>
+                    <div class="div_list" id="div_list6"></div>
+                    <br>
+                </section>
+                <section>
+                    <h2>Honda</h2>
+                    <p>Alguns dos seus atomeveis mais conhecidos.</p><br>
+                    <button class="btn_auto" id="btn_honda" onclick="ListarCarros('honda', '7', list_honda)">Listar
+                        Carros</button>
+                    <div class="div_list" id="div_list7"></div>
+                    <br>
+                </section>
+                <section>
+                    <h2>Hyundai</h2>
+                    <p>Alguns dos seus atomeveis mais conhecidos.</p><br>
+                    <button class="btn_auto" id="btn_hyundai"
+                        onclick="ListarCarros('hyundai', '8', list_hyundai)">Listar Carros</button>
+                    <div class="div_list" id="div_list8"></div>
+                    <br>
+                </section>
+                <section>
+                    <h2>Renault</h2>
+                    <p>Alguns dos seus atomeveis mais conhecidos.</p><br>
+                    <button class="btn_auto" id="btn_renault"
+                        onclick="ListarCarros('renault', '9', list_renault)">Listar Carros</button>
+                    <div class="div_list" id="div_list9"></div>
+                    <br>
+                </section>
+            </main>
+        </td>
+    </table>
+
+    <footer class="main_footer container">
+        <div class="main_footer_copy">
+
+            <p class="m-b-footer"> TP - Curriculos - 2023, todos os direitos reservados.</p>
+            <p class="by">Desenvolvido por: <a href="#" title="Jonatas e Eriel">Jonatas Renan</a></p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

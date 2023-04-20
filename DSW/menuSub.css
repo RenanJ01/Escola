@@ -57,10 +57,10 @@ section p{
 }
 
 .ctn_group{
-  width: 100%;
+  width: 90%;
   height: auto;
-  float: left;
   padding: 10px 10px;
+  margin: 0 auto;
 }
 
 .btn_tp {
