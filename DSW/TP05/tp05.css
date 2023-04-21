@@ -31,6 +31,27 @@ section h2{
 section p{
     color: #666;
 }
+nav{
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+    transition: background-color;
+    transition-duration: 1s;
+}
+nav:hover{
+    background-color: #fff;
+}
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+}
+nav ul li a:hover{
+    color: #000;
+}
 section label{
     margin: 10px auto;
 }
@@ -59,4 +80,16 @@ section button{
     padding: 1% 5%;
     margin: 15px auto;
     border-radius: 10px;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+}
+
+figure img{
+    width: 85%;
+    margin: 10px auto;
+    transition: width;
+    transition-duration: 1s;
 }

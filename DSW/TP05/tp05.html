@@ -18,22 +18,36 @@
             <p>Nome: Jonatas Renan de Jesus Fernandes</p>
             <hr>
         </section>
+
+        <section>
+            <h2>Menu</h2>
+            <nav>
+                <ul>
+                    <li><a href="../menuSub.html">SubMenu - DSW</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </section>
+
         <section>
             <label>Jogos</label>
-            <select id="slc1">
-            </select><br />
+            <figure>
+                <img id="img_jogos" src="https://www.minecraft.net/content/dam/games/minecraft/key-art/Games_Subnav_Minecraft-300x465.jpg">
+            </figure><br/>
+            <select id="slc1" onchange="Imagens(0);">
+            </select><br/>
 
             <label>Livros</label>
-            <select id="slc2">
+            <figure>
+                <img id="img_livros" src="https://m.media-amazon.com/images/I/51MWO+1LhlL._SY344_BO1,204,203,200_.jpg">
+            </figure><br/>
+            <select id="slc2" onchange="Imagens(1);">
             </select><br />
         </section>
         <section>
             <button id="btn_vision" onclick="Esconder();">Mostrar</button>
         </section>
     </main>
-    <section>
-        
-    </section>
 </body>
 
 </html>
