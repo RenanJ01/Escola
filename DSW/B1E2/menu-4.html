@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Menu 4 - Formulario</title>
+</head>
+
+<body class="qua">
+    <header>
+        <div class="title_menu">
+            <h1><a name="menu">Apresentação - Menu 3</a></h1>
+
+            <h3>Grupo:</h3>
+            <p>
+                Eriel de Jesus - CB1990543<br>
+                Jonatas Renan - CB3008606<br>
+                Lucas Henrique - CB3008665<br>
+                Matheus Mesquita - CB3009114<br>
+            </p>
+        </div>
+        <ol>
+            <li><a class="link" href="menu-1.html" target="self_">Menu 1</a></li>
+            <li><a class="link" href="menu-2.html" target="self_">Menu 2</a></li>
+            <li><a class="link" href="menu-3.html" target="self_">Menu 3</a></li>
+            <li><a class="link" href="#menu" target="self_">Menu 4</a></li>
+        </ol>
+    </header>
+
+    <br>
+    <h1 class="h_titulo">Menu 4 – Formulário</h1>
+    <br>
+
+    <main class="menu4">
+        <h2>Modelos Formulários</h2>
+        <p>Pelo método get, pois dá para visualizar.</p>
+        <form action="menu-4.html" method="get">
+            <fieldset>
+                <h3>Login</h3>
+
+                <label>Username:</label><br>
+                <input type="text" name="fuser" id="fuser"><br><br>
+
+                <label>Senha:</label><br>
+                <input type="text" name="fsenha" id="fsenha"><br><br>
+                
+                <input type="submit" value="Entrar">
+                <input type="reset" value="Resetar">
+            </fieldset>
+        </form>
+        <form action="menu-4.html" method="get">
+            <fieldset>
+                <h3>Cadastrar</h3>
+
+                <label>Nome:</label><br>
+                <input type="text" name="fnome" id="fnome"><br><br>
+                
+                <label>Username:</label><br>
+                <input type="text" name="fuser" id="fuser"><br><br>
+
+                <label>Senha:</label><br>
+                <input type="text" name="fsenha" id="fsenha"><br><br>
+                
+                <input type="submit" value="Entrar">
+                <input type="reset" value="Resetar">
+            </fieldset>
+        </form>
+    </main>
+
+</body>
+</html>

@@ -41,7 +41,7 @@ function Imagens(modo){
     var select = document.getElementsByTagName("select");    
     var id = select[modo].selectedIndex;
     var option = select[modo].options[id].value;
-
+    
     if(modo == 0){
         var image = document.getElementById("img_jogos");
         image.setAttribute("src", img[option]);
