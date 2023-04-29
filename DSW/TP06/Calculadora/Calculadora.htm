@@ -19,7 +19,7 @@
 	<div class="container">
 		<form name="form">
 			<div class="display">
-				<input type="text" placeholder="0" name="displayResult" />
+				<input type="text" id="dpy_calc" placeholder="0" name="displayResult" />
 			</div>
 
 			<div class="buttons">
@@ -58,27 +58,27 @@
 
 	<div class="ctn_btn">
 		<div class="tooltip">
-			<button onclick="myFunction()" onmouseout="outFunc()">
-				<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-				Copy text
+			<button onclick="Copia()" onmouseout="Mensagem()">
+				<span class="tooltiptext" id="msg_tooltip">Copia pro clipboard</span>
+				Copiar texto
 			</button>
 		</div>
 	</div>
 
 	<script>
 		function Copia() {
-			var copyText = document.getElementById("myInput");
+			var copyText = document.getElementById("dpy_calc");
 			copyText.select();
 			copyText.setSelectionRange(0, 99999);
 			navigator.clipboard.writeText(copyText.value);
 
-			var tooltip = document.getElementById("myTooltip");
-			tooltip.innerHTML = "Copied: " + copyText.value;
+			var tooltip = document.getElementById("msg_tooltip");
+			tooltip.innerHTML = "Copia: " + copyText.value;
 		}
 
 		function Mensagem() {
-			var tooltip = document.getElementById("myTooltip");
-			tooltip.innerHTML = "Copy to clipboard";
+			var tooltip = document.getElementById("msg_tooltip");
+			tooltip.innerHTML = "Copia pro clipboard";
 		}
 	</script>
 </body>
