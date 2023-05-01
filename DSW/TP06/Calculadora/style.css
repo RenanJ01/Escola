@@ -86,24 +86,24 @@ input[type=text] {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
 	border-radius: 14px;
 	padding: 5px 0px;
-	width: 10%;
 	position: fixed;
+	border: 1px solid #515151;
 }
 .ctn_btn button{
-	border: 0px;
+	border: none;
 	background-color: transparent;
+	cursor: pointer;
 }
 .tooltip {
 	position: relative;
 	display: inline-block;
-  }
-  .tooltip {
+}
+.tooltip {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-  
+} 
 .tooltip .tooltiptext {
 	visibility: hidden;
 	width: 140px;
@@ -119,9 +119,8 @@ input[type=text] {
 	margin-left: -75px;
 	opacity: 0;
 	transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
+}  
+.tooltip .tooltiptext::after {
 	content: "";
 	position: absolute;
 	top: 100%;
@@ -130,9 +129,8 @@ input[type=text] {
 	border-width: 5px;
 	border-style: solid;
 	border-color: #555 transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
+}
+.tooltip:hover .tooltiptext {
 	visibility: visible;
 	opacity: 1;
-  }
+}

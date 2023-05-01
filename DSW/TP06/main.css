@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: "Montserrat", Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+/* Body */
+.fd_black, .houver_black:hover{
+    color: #fff!important;
+    background-color: #3a0000!important;
+}
+
+/* nav class */
+.nav_bar{
+    text-align: center!important;
+    font-size: 12px!important;
+    height: 100%;
+    width: 120px;
+    background: #000;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto;
+    display: block;
+}
+
+@media (max-width: 600px){
+    .hide-small {
+        display: none!important;
+    }
+}
+@media (min-width:993px){
+    .hide-large{display:none!important}
+}
+
+.item_bar{
+    width: 100%;
+    display: block;
+    padding: 12px 24px!important;
+    text-align: center;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0;
+}
+.icon{
+    font-size: 36px!important;
+}
+.btn, .button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn, .button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center !important;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.button:hover {
+    color: #3a0000!important;
+    background-color: #fff!important;
+}
+a {
+    color: inherit;
+    background-color: transparent;
+}
+
+/* Imagem */
+img {
+    border-style: none;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Nav Class 2 */
+.nav_bar_2{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #160101;
+}
+@media (max-width: 992px) and (min-width: 601px){
+    .hide-medium {
+        display: none!important;
+    }
+}
+
+.nav_bar_2 .bar{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.opacity, .hover-opacity:hover {
+    opacity: 0.60;
+}
+.off{
+    opacity: 1;
+}
+.nav_bar_2 div .bar_item{
+    width: 25%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: left;
+    outline: 0;
+}
+
+/* Main */
+#main, #calc {
+    margin-left: 120px;
+    transition: margin-left .4s;
+    padding: 12px 24px!important;
+}
+#main header, #calc header{
+    max-width: 980px;
+    padding-top: 32px!important;
+    padding-bottom: 32px!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main header h1, #calc header h1{
+    font-size: 32px;
+}
+@media only screen and (max-width: 600px) {
+    #main {margin-left: 0}
+    #calc {margin-left: 0}
+}
+
+#aba{
+    color: #757575!important;
+    padding-top: 32px!important;
+    padding-bottom: 32px!important;
+    text-align: justify!important;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#aba h2{
+    color: #f1f1f1!important;
+    font-size: 30px;
+}
+#aba hr{
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    width:200px
+}
+
+/* Butões */
+
+input.btn_action {
+    background: #6f6a6a;
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 24px;
+    margin-top: 10px;
+    margin-right: 15px;
+    transition: padding, backgorund, color;
+    transition-duration: 1s, 1s, 1s;
+}
+
+input.btn_action:hover {
+    padding: 6px 23px;
+    color: #a3a3a3;
+    background: #323232;
+}
+
+input.btn_text {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+/* Menu - Calculadora */
+#calc{
+    display: none;
+}
+#calc iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
