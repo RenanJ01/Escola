@@ -132,7 +132,7 @@ function test_input_array($data)
 		?>
     </section>
     <footer>
-        <p class="ftr_direitos"> Escola - Trabalhos Praticos - 2022, todos os
+        <p class="ftr_direitos"> Escola - Trabalhos Praticos - 2023, todos os
             direitos reservados.</p>
         <p class="ftr_autor">Desenvolvido por: <a href="#" title="Jonatas e Eriel">Jonatas Renan e Eriel</a></p>
     </footer>
