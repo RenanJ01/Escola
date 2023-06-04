@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="tp06.css">
+        <link type="text/ico" rel="shortcut icon" href="../../Imagens/title.ico"
+            type="image/x-icon">
+        <title>TP06 - Funções JavaScript</title>
+    </head>
+    <body>
+        <!--Considere o código abaixo com a função declarada:
+    function mensagem() {
+    console.log("Essa mensagem é exibida depois de 3 segundos");
+    }
+    setTimeout(mensagem, 3000);
+    2) Reescreva o código acima passando a função (anônima) da
+    mensagem diretamente como argumento da função setTimeout.
+    3) Reescreva o código acima passando uma função como expressão
+    como argumento da função setTimeout.
+    4) Reescreva o código acima passando uma função Arrow como
+    argumento da função setTimeout.-->
+        <main>
+            <div id="cont">
+
+            </div>
+            <h2>Alerta:</h2>
+            <section class="cod">
+                <p id="alert">
+                    Sem alertas!
+                </p>
+            </section>
+
+            <hr style="border: 1px solid var(--global-color-3);margin: 25px 0;">
+
+            <h2>Função Declarada:</h2>
+            <section class="cod">
+                <code>
+                    //Declarada<br>
+                    function mensagem() {<br>
+                    alert("Essa mensagem é exibida depois de 3 segundos");<br>
+                    }<br>
+                    setTimeout(mensagem, 3000);
+                </code>
+            </section>
+
+            <br><br>
+
+            <h2>Função Anônima:</h2>
+            <section class="cod">
+                <code>
+                    //Anônima<br>
+                    const msg_exp = function () {<br>
+                        return alert("Essa mensagem é exibida depois de 6 segundos");<br>
+                    }<br>
+                    setTimeout(msg_exp, 6000);
+                </code>
+            </section>
+
+            <br><br>
+
+            <h2>Função Expressão:</h2>
+            <section class="cod">
+                <code>
+                    //Expressão<br>
+                    const obj = {<br>
+                        alert() {<br>
+                            alert("Essa mensagem é exibida depois de 9 segundos");<br>
+                        }<br>
+                    };<br>
+                    setTimeout(obj.alert, 9000);
+                </code>
+            </section>
+            
+            <br><br>
+
+            <h2>Função Arrow:</h2>
+            <section class="cod">
+                <code>
+                    //ArroW <br>
+                    setTimeout(() => {<br>
+                    alert("Essa mensagem é exibida depois de 12 segundos");<br>
+                    }, 12000);<br>
+                </code>
+            </section>
+        </main>
+
+        <br><br><br>
+        
+        <footer>
+            <p class="ftr_direitos"> Escola - Trabalhos Praticos - 2023, todos
+                os direitos
+                reservados.</p>
+            <p class="ftr_autor">Desenvolvido por: <a href="#" title="Jonatas
+                    Renan">Jonatas Renan</a></p>
+        </footer>
+
+        <script>
+
+        var p = document.getElementById("alert");
+
+        //Declarada
+        function mensagem() {
+            p.innerText = "Essa mensagem é exibida depois de 3 segundos.";
+        }
+        setTimeout(mensagem, 3000);
+        //Anônima
+        const msg_exp = function () {
+            return p.innerText = "Essa mensagem é exibida depois de 6 segundos";
+        }
+        setTimeout(msg_exp, 6000);
+        //Expressão
+        const obj = {
+            alert() {
+                p.innerText = "Essa mensagem é exibida depois de 9 segundos";
+            }
+        };
+        setTimeout(obj.alert, 9000);
+        //ArroW
+        setTimeout(() => {
+            p.innerText = "Essa mensagem é exibida depois de 12 segundos";
+        }, 12000);
+    </script>
+    </body>
+</html>

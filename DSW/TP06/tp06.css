@@ -1,0 +1,96 @@
+body{
+    background-color: var(--global-color-1);
+    font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+    margin: 0%;
+    padding: 0px;
+    border: 0px;
+}
+
+*{
+  --global-color-1: #fa9d6b;
+  --global-color-2: #fff420;
+  --global-color-3: #ac1d00;
+  --global-color-4: #1f1f1f;
+  --global-color-5: #9CADA6;
+}
+
+/* Cabeçalho da Página */
+header{
+  width: 100%;
+  background-color: var(--global-color-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ctn_titulo {
+  color: #1c1c1c;
+  padding: 10px;
+}
+
+.ctn_titulo p{
+  font-style: italic;
+  font-stretch: semi-condensed;
+}
+
+/* Principal da Página */ 
+main{
+  width: 100%;
+  text-align: center;
+}
+
+/* Seções */
+section h1, h2, h3{
+  font-weight: bold;
+  color: #000;
+}
+section p{
+  color: #1c1c1c;
+}
+
+.cod{
+    width: 75%;
+    background-color: #fff;
+    border: 1px solid #3e3e3e;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+
+/*Rodapé da Página*/
+footer{
+  text-decoration: none;
+  width: 100%;
+  background-color: var(--global-color-3);
+  float: left;
+  text-align: center;
+  padding: 1em 0em;  
+  bottom: 0;
+  position: relative;
+}
+footer p{
+  font-family:2 'open_sanslight';
+  font-size: 1em;
+  color: #e1e0e0;
+  height: 20px;
+}
+
+footer .ftr_direitos {
+  margin-bottom: 0.5em;
+}
+
+footer .ftr_autor {
+  font-size: 0.96em;
+}
+
+footer .ftr_autor a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .ftr_autor a:hover {
+  text-decoration: underline;
+}
