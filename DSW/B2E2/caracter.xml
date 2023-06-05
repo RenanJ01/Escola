@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+  <caracter category="person">
+    <nome lang="pt-BR"></nome>
+    <ano>2010</ano>
+    <pele>parda</pele>
+    <cabelo>#000</cabelo>
+    <roupa>blue</roupa>
+  </caracter>
+
+</persons>
