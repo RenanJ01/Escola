@@ -1,5 +1,10 @@
 *{
     box-sizing: border-box;
+    --e-color-1: rgb(45, 53, 64); 
+    --e-color-2: rgb(242, 233, 107); 
+    --e-color-3: rgb(242, 237, 167); 
+    --e-color-4: rgb(242, 194, 136); 
+    --e-color-5: rgb(191, 165, 132); 
 }
 
 html{
@@ -20,8 +25,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fd_button, .houver_black:hover{
-    color: #fff!important;
-    background-color: #3a0000!important;
+    color: #000!important;
+    background-color: var(--e-color-2)!important;
 }
 
 /* nav class */
@@ -30,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 12px!important;
     height: 100%;
     width: 120px;
-    background: #000;
+    background: linear-gradient(225deg, var(--e-color-2), var(--e-color-2), #fff);
     position: fixed!important;
     z-index: 1;
     overflow: auto;
@@ -65,15 +70,14 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none;
-    color: inherit;
-    background-color: inherit;
     text-align: center !important;
     cursor: pointer;
     white-space: nowrap;
+    transition: background-color 1s, color 2s;
 }
 .button:hover {
-    color: #3a0000!important;
-    background-color: #fff!important;
+    color: var(--e-color-2)!important;
+    background-color: #000!important;
 }
 a {
     color: inherit;
@@ -85,6 +89,8 @@ img {
     border-style: none;
     vertical-align: middle;
     width: 100%;
+    /* background: linear-gradient(152deg, #fff, var(--e-color-2)); */
+    margin-bottom: 10px;
 }
 
 /* Nav Class 2 */
@@ -93,7 +99,7 @@ img {
     position: fixed;
     width: 100%;
     z-index: 1;
-    background-color: #160101;
+    background-color: var(--e-color-2);
 }
 @media (max-width: 992px) and (min-width: 601px){
     .hide-medium {
