@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>B2E2 - Paisagens</title>
-</head>
-<body>
-    <nav class="nav_bar hide-small">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <script src="index.js"></script>
+        <title>B2E2 - Paisagens</title>
+    </head>
+    <body>
+        <nav class="nav_bar hide-small">
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Instituto_Federal_de_S%C3%A3o_Paulo_-_Marca_Vertical_2015.svg">
-
-        <a href="#" class="item_bar fd_button button
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Instituto_Federal_de_S%C3%A3o_Paulo_-_Marca_Vertical_2015.svg">
+            <a href="#" class="item_bar fd_button button
                 hover-black">
-            <i class="fa fa-home icon"></i>
-            <p>Inicio</p>
-        </a>
-        <a href="#" class="item_bar fd_button button
+                <i class="fa fa-home icon"></i>
+                <p>Inicio</p>
+            </a>
+            <a href="https://renanj01.github.io/Escola/DSW/B2E2/TB2/index.html" class="item_bar fd_button button
                 hover-black">
-            <i class="fa fa-user icon"></i>
-            <p>Trabalho 2</p>
-        </a>
-    </nav>
+                <i class="fa fa-user icon"></i>
+                <p>Trabalho 1</p>
+            </a>
+        </nav>
 
-    <div class="nav_bar_2 hide-large hide-medium" id="nav_bar2">
-        <div class="bar opacity off">
-            <a href="#" class="bar_item button">Inicio</a>
-            <a href="" class="bar_item button">Trabalho 2</a>
+        <div class="nav_bar_2 hide-large hide-medium" id="nav_bar2">
+            <div class="bar opacity off">
+                <a href="#" class="bar_item button"><i class="fa fa-home"></i> Inicio</a>
+                <a href="./TB2/index.html" class="bar_item button"><i class="fa fa-user"></i> Trabalho 2</a>
+            </div>
         </div>
-    </div>
 
-    <main>
-        
-    </main>
+        <main id="main">
+            <!-- Cabeçalho -->
+            <header>
 
-</body>
+                <img id="img_title"
+                    src="https://images.pexels.com/photos/592077/pexels-photo-592077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <h1>B2E2 - Paisagens</h1>
+                <p><b>Grupo: </b><br />
+                    Eriel de Jesus - CB1990543<br />
+                    Jonatas Renan - CB3008606<br />
+                    Lucas Henrique - CB3008665<br />
+                    Matheus Mesquita - CB3009114
+                </p>
+
+                <hr>
+            </header>
+
+            <!-- Paisagens -->
+            <section id="scn_paisagem">
+                <div>
+                    
+                    <h2>Visualizar Paisagens</h2><br/>
+
+                    <select id="slc_pais" onchange="criaConteudo(this);" size="5">
+                        <option value="" disabled="" selected="">Escolha um
+                            país?</option>
+                        <option value="BR">Brasil</option>
+                        <option value="FR">França</option>
+                        <option value="PT">Portugal</option>
+                        <option value="MX">México</option>
+                        <option value="AU">Austrália</option>
+                        <option value="JP">Japão</option>
+                        <option value="EG">Egito</option>
+                    </select>
+                    <!-- Brasil, França, Portugal, Mexico, Australia, Japão e Egito -->
+                </div>
+                
+                <article id="glr_img">
+                    
+                    <br/><br/><hr>
+
+                    <h2 id="h_pais">País Selecionado</h2>
+                    
+                    <img id="img_pais" src="" height="200px"><br/><br/>
+                    
+                    <select id="slc_local" onchange="ImgLocal();"></select><br/>
+
+                    <img id="img_local" src="" height="200px"">
+
+                </article>
+            </section>
+
+            <!-- Rodape -->
+            <br/>
+            <br/>
+        </main>
+
+    </body>
 </html>

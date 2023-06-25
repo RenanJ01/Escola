@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>B2E2 - Animes</title>
+</head>
+
+<body>
+    <nav class="nav_bar" id="nav_bar">
+        <div class="bar opacity off">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Instituto_Federal_de_S%C3%A3o_Paulo_-_Marca_Horizontal_2015.svg/120px-Instituto_Federal_de_S%C3%A3o_Paulo_-_Marca_Horizontal_2015.svg.png">
+            <a href="#" class="bar_item button"><i class="fa fa-home"></i> Inicio</a>
+            <a href="https://renanj01.github.io/Escola/DSW/B2E2/index.html" class="bar_item button"><i class="fa fa-user"></i> Trabalho 2</a>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Cabeçalho -->
+        <header>
+
+            <h1>B2E2 - Animes</h1>
+            <p><b>Grupo: </b><br />
+                Eriel de Jesus - CB1990543<br />
+                Jonatas Renan - CB3008606<br />
+                Lucas Henrique - CB3008665<br />
+                Matheus Mesquita - CB3009114
+            </p>
+
+            <hr>
+        </header>
+
+        <!-- Anime -->
+        <section id="scn_anime">
+            <div>
+
+                <h2>Visualizar os Personagens:</h2><br />
+
+                <select id="slc_anime" onchange="criaConteudo(this);" size="5">
+                    <option value="" disabled="" selected="">Escolha um anime:</option>
+                    <option value="DB">Dragon Ball</option>
+                    <option value="OP">One Piece</option>
+                    <option value="NT">Naruto</option>
+                    <option value="BH">Bleach</option>
+                </select>
+
+            </div>
+
+            <article id="glr_img">
+
+                <br /><br />
+                <hr>
+
+                <h2 id="h_anime">Anime Selecionado</h2>
+
+                <img id="img_anime" src="" height="200px" style="background-color: #fff;"><br /><br />
+
+                <select id="slc_person" onchange="GerarModel();"></select><br />
+                
+                <div id="loading" style="display: none;">
+                    Carregando...<br/>
+                </div>
+
+                <canvas id="person" width="500px" height="500px"></canvas>
+
+                </article>
+            </section>
+
+            <!-- Rodape -->
+            <br/>
+            <br/>
+        </main>
+
+        <br><br>
+    <footer>
+        <p id="ref">"Dragon ball zBroly" (https://skfb.ly/6wsDt) by cheesycake00777 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Dragon Ball Z Shin Budokai" (https://skfb.ly/ooMr8) by 1FENIL is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Dragon Ball - Goku Super Sayayin" (https://skfb.ly/6RPvN) by Sebastian.BA is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Shenron (Dragon Ball)" (https://skfb.ly/6GwJL) by Yanez Designs is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Bulma - Dragon Ball" (https://skfb.ly/6v6ZM) by Adeamor is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Ace One Piece" (https://skfb.ly/o6GHL) by annalapatata is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Luffy One Piece" (https://skfb.ly/wYAt) by AnmAn is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Zoro One Piece" (https://skfb.ly/xFUs) by AnmAn is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "ONE PIECE USOPP" (https://skfb.ly/6WK8p) by kishi is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Kakashi_hatake" (https://skfb.ly/oz997) by ellisledingham is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Hinata" (https://skfb.ly/6X7sF) by bananna is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Sasuke Uchiha" () by chayaruart is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Naruto Sage" () by ninjatorrent is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Hollow Ichigo - Bleach (Sculpt)" (https://skfb.ly/oqES7) by Christian Day is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "Ichigo_Kurosaki" () by mikomagallona is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+            "toshiro_hitsugaya" (https://skfb.ly/oEnRw) by BXD is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).</p>
+        <p class="ftr_autor">Desenvolvido por: <a href="#" title="Jonatas Renan">Jonatas Renan</a></p>
+    </footer>
+
+
+        <script src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    </body>
+</html>
