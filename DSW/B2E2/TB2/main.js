@@ -10,8 +10,8 @@ var animeOptions = [
   },
   {
     sigla: "OP",
-    nomeDB: ["Ace", "Luffy", "Usopp", "Zoro"],
-    mdlDB: ["./Modelo/OP-Ace.glb", "./Modelo/OP-Luffy.glb", "./Modelo/OP-Usopp.glb", "./Modelo/OP-Zoro.glb"],
+    nomeDB: ["Ace", "Luffy", "Sanji", "Zoro"],
+    mdlDB: ["./Modelo/OP-Ace.glb", "./Modelo/OP-Luffy.glb", "./Modelo/OP-Sanji.glb", "./Modelo/OP-Zoro.glb"],
     imgURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqgiR4xWYOnKU3165LE_BO05lUkXFsjaeE4PjxIvalQq75M-xc5GGSpINb2FW7LgKscNw&usqp=CAU"
   },
   {
