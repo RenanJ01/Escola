@@ -1,22 +1,21 @@
 <?php
-
-session_start();
+   session_start();
 
 if (isset($_POST['login'])) {
     //Esta criptografado
-    $login_db = 'trabalho@dsw.ifsp';//login trabalho@dsw.ifsp
-    $senha_db = '123456'; //senha 123456
+    $login_db = '$2y$10$iUDLlzdiTQMDjYCkXACXvumsqjkn0gAlQYeNt0QJBi6EPF8dfJYCC';//login trabalho@dsw.ifsp
+    $senha_db = '$2y$10$kdM4OfHhCdHcGNptm1XU5.5zDTl9oSBhWh/hQ49P/Fpd5kVHczFxe'; //senha 123456
     $erros = array();
-    $login = $_POST['login'];
-    $senha = $_POST['senha'];
+    $login = password_hash($_POST['login'], PASSWORD_DEFAULT);
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
     if (empty($login) || empty($senha)) {
         $erros[] = "<li>Login e/ou senha não informado(s)!</li>";
-    } elseif ($login != $login_db) {
+    } elseif (password_verify($login, $login_db)) {
         $erros[] = "<li>Usuário não encontrado!</li>";
-    } elseif ($senha != $senha_db) {
+    } elseif (password_verify($senha, $senha_db)) {
         $erros[] = "<li>Senha inválida!</li>";
     } else {
-        $_SESSION['Usuario'] = $login;
+        $_SESSION['Usuario'] = $_POST['login'];
         header('Location: home.php');
     }
 }
