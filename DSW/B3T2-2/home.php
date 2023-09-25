@@ -19,7 +19,7 @@ if (!isset($_SESSION['Usuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="icon.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
-    <title>Black Seda</title>
+    <title>White Seda</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@ if (!isset($_SESSION['Usuario'])) {
     <!-- Menu Suspenso -->
     <nav class="nav_bar" id="nav_bar">
         <div class="bar">
-            <span>Black SEDA</span>
+            <span>White SEDA</span>
             <a href="./logout.php?nivel=0" class="bar_item button">Logout</a>
             <a href="./index.html" class="bar_item button">Início</a>
         </div>
@@ -37,10 +37,10 @@ if (!isset($_SESSION['Usuario'])) {
     <div id="aba">
         <h1>Integrantes do Grupo:</h1>
         <p>
-            Eriel de Jesus - CB1990543 </br>
-            Jonatas Renan - CB3008606 </br>
-            Lucas Henrique - CB3008665 </br>
-            Matheus Mesquita - CB3009114 </br>
+            David Gregorio - CB3008681<br>
+            Juan Oliveira - CB3009921<br>
+            Nicolas dos Santos - CB3008932<br>
+            Wictor Eduardo -CB3008622<br>
         </p>
         <hr style="border: 1px solid var(--color-3);">
     </div>
@@ -80,8 +80,6 @@ if (!isset($_SESSION['Usuario'])) {
             <span id="tab_categ"></span><br>
             <label>Preço:</label>
             <span id="tab_preco"></span><br>
-            <label>Tamanho:</label>
-            <span id="tab_tam"></span><br>
             <label>Disponibilidade:</label>
             <span id="tab_disp"></span><br>
         </section>
@@ -91,9 +89,9 @@ if (!isset($_SESSION['Usuario'])) {
 
             <?php
             for ($i = 1; $i < 11; $i++) {
-                $exec = $con->Con_MultSelect("SELECT * FROM produtos as P INNER JOIN descproduto as D ON P.ID = D.ProdutoID INNER JOIN tamanhos as T ON D.TamanhoID = T.ID INNER JOIN categorias as C ON C.ID = P.CategoriaID WHERE P.ID = $i");
+                $exec = $con->Con_MultSelect("SELECT * FROM produtos as P INNER JOIN detalhesproduto as D ON P.ID = D.ProdutoID INNER JOIN categorias as C ON C.ID = P.CategoriaID WHERE P.ID = $i");
                 foreach ($exec as $row) {
-                    echo ("Produtos.push([" . $i . ",'" . $row['NomeProduto'] . "', '" . $row['CategoriaID'] . "', " . $row['Preco'] . ", '" . $row['Tamanho'] . "', '" . $row['Disponibilidade'] . "', '" . $row['NomeCategoria']. "']);");
+                    echo ("Produtos.push([" . $i . ",'" . $row['NomeProduto'] . "', '" . $row['CategoriaID'] . "', " . $row['Preco'] . ", '" . $row['Disponibilidade'] . "', '" . $row['NomeCategoria'] . "']);");
                 }
             }
             ?>
@@ -135,7 +133,7 @@ if (!isset($_SESSION['Usuario'])) {
                         }
                         break;
                 }
-
+                
                 var slc_dados = document.getElementById("slc_prod");
 
                 // Apaga dados do select dados:
@@ -170,14 +168,14 @@ if (!isset($_SESSION['Usuario'])) {
                 // Seleção do detalhes:
                 var indProd = slc_pord.selectedIndex;
                 var detalheI = slc_pord.options[indProd].value;
+                console.log(indProd + "/n"+detalheI);
 
                 var spans = tab.querySelectorAll("span");
-                spans[0].innerText=Produtos[detalheI-1][6];
-                spans[1].innerText=Produtos[detalheI-1][3];
-                spans[2].innerText=Produtos[detalheI-1][4];
-                spans[3].innerText=Produtos[detalheI-1][5];
+                spans[0].innerText = Produtos[detalheI-1][5];
+                spans[1].innerText = Produtos[detalheI-1][3];
+                spans[2].innerText = Produtos[detalheI-1][4];
 
-                tab.style.display="block";
+                tab.style.display = "block";
             }
 
             var slc_categ = document.getElementById("slc_categ");
