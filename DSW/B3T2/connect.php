@@ -3,16 +3,18 @@ class Conexao
 {
     private $conection;
 
-    //ConexÃ£o
+    //Conexão
     private function Con_AbrirConection()
     {
         try {
-            $this-> conection = new PDO("mysql: host=localhost:8080; dbname=dsw", "root", "");
-            $this-> conection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this-> conection->exec("SET CHARACTER SET utf8");
-            return $this->conection;
+            $this->conection = mysqli_connect("localhost", "root", "", "dsw", "3306");
+            $this->conection->set_charset("utf-8");
+            if (!$this->conection) {
+                die("Falha na conexão: " . mysqli_connect_error());
+            }
+            else{return $this->conection;}
             //echo "Sucesso na conexão!";
-        } catch (PDOException $e) {
+        } catch (Exception $e) {
             //echo "Falha na conexão:".$e->getMessage();
             return false;
         }
@@ -24,18 +26,28 @@ class Conexao
     {
         try {
             $con = $this->Con_AbrirConection();
-            $con->exec("SET CHARACTER SET utf8");
-            $res = $con->prepare($query);
-            $res->execute();
-            if ($res) {
-                $res->setFetchMode(PDO::FETCH_ASSOC);
-                $tab = $res->fetchAll();
-                return $tab;
-            } else {
-                return false;
-            }
+            $res = mysqli_query($con, $query);
+            mysqli_close($con);
+            return mysqli_fetch_assoc($res);
         } catch (Exception $e) {
             echo "Ocorreu o erro:" . $e->getMessage();
+        }
+    }
+
+    public function Con_MultSelect($query)
+    {
+        try {
+            $con = $this->Con_AbrirConection();
+            $res = mysqli_query($con, $query);
+            $data = array(); // Array para armazenar os resultados
+            while ($row = mysqli_fetch_assoc($res)) {
+                $data[] = $row;
+            }
+            mysqli_close($con);
+            return $data; // Retorna um array de resultados
+        } catch (Exception $e) {
+            echo "Ocorreu um erro: " . $e->getMessage();
+            return false;
         }
     }
 }
