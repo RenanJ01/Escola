@@ -1,0 +1,109 @@
+* {
+    --color-tb: #fff;
+    --color-tp: #ffc400;
+    --color-1: #000000;
+    --color-2: #818075;
+    --color-3: #f82828;
+    --color-4: #e68200;
+    --color-5: #88564f;
+
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Montserrat", Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+}
+
+body,
+html {
+    background: #ECEDEF;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+/* Menu */
+.nav_bar .bar {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--color-1);
+}
+.nav_bar .bar_item {
+    width: 25%;
+    display: block;
+    padding: 8px 16px;
+    border: none;
+    float: right;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-tb);
+    background-color: var(--color-1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.bar_item:hover{
+    color:var(--color-tp);
+    background-color: #ECEDEF;
+}
+.bar span{
+    width: 25%;
+    display: block;
+    padding: 0px 16px;
+    border: none;
+    float: left;
+    text-decoration: none;
+    color: var(--color-tp);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 26px;
+}
+
+/* Empresa */
+#aba{
+    text-align: center;
+    margin: 50px 0 0 0px;
+}
+
+main{
+    padding: 32px auto;
+    text-align: center!important;
+    margin: 10px auto;
+}
+main p{
+    font-size: 15px;
+}
+#tab{
+    display: none;
+    width: 80%;
+    background-color: var(--color-4);
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px #222;
+}
+select {
+    text-align: center;
+    margin: auto;
+}
