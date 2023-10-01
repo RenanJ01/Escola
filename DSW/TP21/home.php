@@ -21,13 +21,14 @@ if (!isset($_SESSION['Usuario'])) {
     <link rel="stylesheet" href="main.css">
     <title>Leilão Cubatão</title>
 </head>
-<body>
-    
+
+<body onload="LoadSelect();">
+
     <!-- Menu Suspenso -->
     <nav class="nav_bar" id="nav_bar">
         <div class="bar">
             <span>Leilão Cubatão</span>
-            <a href="./login.php" class="bar_item button">Login</a>
+            <a href="./logout.php" class="bar_item button">Logout</a>
             <a href="./index.html" class="bar_item button">Início</a>
         </div>
     </nav>
@@ -52,136 +53,130 @@ if (!isset($_SESSION['Usuario'])) {
 
         <h2>Categorias</h2><br />
 
-        <?php
-        echo ("<select id='slc_categ'  size='4'>");
-        echo ('<option value="" disabled="" selected="">Escolha uma categoria?</option>');
+        <select id='slc_categ' size='3'>
+            <option value="" disabled="" selected="">Escolha uma categoria?</option>
+        </select><br><br>
+        <hr style='border: 1px solid #000; width:90%;'><br>
 
-        $con = new Conexao();
-        $exec = $con->Con_MultSelect("SELECT * FROM categorias");
-
-        if ($exec) { // Verifique se a consulta foi bem-sucedida
-            foreach ($exec as $row) {
-                echo ("<option value='" . $row['ID'] . "'>" . $row['NomeCategoria'] . "</option>");
-            }
-        } else {
-            echo "Ocorreu um erro na consulta.";
-        }
-        echo ("
-            </select><br><br>
-            <hr style='border: 1px solid #000; width:90%;'><br>");
-        ?>
 
         <select id='slc_prod' style='display: none'></select>
 
         <section id="tab">
             <label>Categoria:</label>
-            <span id="tab_categ"></span><br>
-            <label>Preço:</label>
+            <span id="tab_categ"></span><br><br>
+            <img id="tab_img" style="width: 50%;"></img><br>
+            <label>Preço:</label><br>
             <span id="tab_preco"></span><br>
-            <label>Tamanho:</label>
-            <span id="tab_tam"></span><br>
-            <label>Disponibilidade:</label>
-            <span id="tab_disp"></span><br>
+            <div id="tab_descr">
+                <hr style="border: 1px solid var(--color-1);">
+            <label>Cor:</label>
+            <span id="tab_cor"></span><br>
+            <label>Lote:</label>
+            <span id="tab_lote"></span><br>
+            <label>Data:</label>
+            <span id="tab_date"></span><br>
+            </div>
         </section>
 
-        <script type="module">
-            var Produtos = [];
+        <script>
+            var Produtos = []; // Declare a variável Produtos em um escopo global para que possa ser acessada em todas as funções.
 
-            <?php
-            for ($i = 1; $i < 11; $i++) {
-                $exec = $con->Con_MultSelect("SELECT * FROM produtos as P INNER JOIN descproduto as D ON P.ID = D.ProdutoID INNER JOIN tamanhos as T ON D.TamanhoID = T.ID INNER JOIN categorias as C ON C.ID = P.CategoriaID WHERE P.ID = $i");
-                foreach ($exec as $row) {
-                    echo ("Produtos.push([" . $i . ",'" . $row['NomeProduto'] . "', '" . $row['CategoriaID'] . "', " . $row['Preco'] . ", '" . $row['Tamanho'] . "', '" . $row['Disponibilidade'] . "', '" . $row['NomeCategoria']. "']);");
+            function LoadSelect() {
+                if (window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
+
+                xmlhttp.open("GET", "http://localhost:8080/Escola/DSW/TP21/request.php?id=1");
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+                // Manipule o JSON somente após o carregamento completo dos dados.
+                xmlhttp.onload = function () {
+                    var dados = JSON.parse(this.responseText);
+                    var slc_c = document.getElementById("slc_categ");
+                    dados.forEach(id => {
+                        var opt = document.createElement("OPTION");
+                        opt.setAttribute("value", id["ID"]);
+                        opt.text = id["NomeCategoria"];
+                        slc_c.appendChild(opt);
+                    });
+                };
+
+                xmlhttp.send();
             }
-            ?>
 
             function criaConteudo(categoria) {
-                // Seleção da categoria:
                 var indCateg = categoria.selectedIndex;
                 var categ = categoria.options[indCateg].value;
                 var text = categoria.options[indCateg].text;
-                var prod = [];
 
-                switch (categ) {
-                    case "1":
-                        for (var i = 0; i < Produtos.length; i++) {
-                            if (Produtos[i][2] == '1') {
-                                prod.push([Produtos[i][0], Produtos[i][1]]);
-                            }
-                        }
-                        break;
-                    case "2":
-                        for (var i = 0; i < Produtos.length; i++) {
-                            if (Produtos[i][2] == '2') {
-                                prod.push([Produtos[i][0], Produtos[i][1]]);
-                            }
-                        }
-                        break;
-                    case "3":
-                        for (var i = 0; i < Produtos.length; i++) {
-                            if (Produtos[i][2] == '3') {
-                                prod.push([Produtos[i][0], Produtos[i][1]]);
-                            }
-                        }
-                        break;
-                    case "4":
-                        for (var i = 0; i < Produtos.length; i++) {
-                            if (Produtos[i][2] == '4') {
-                                prod.push([Produtos[i][0], Produtos[i][1]]);
-                            }
-                        }
-                        break;
+                // Limpe a variável Produtos antes de preenchê-la com novos dados.
+                Produtos = [];
+
+                if (window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                 }
 
-                var slc_dados = document.getElementById("slc_prod");
+                xmlhttp.open("GET", "http://localhost:8080/Escola/DSW/TP21/request.php?id=2&v=" + categ);
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-                // Apaga dados do select dados:
-                while (slc_dados.options.length > 0) {
-                    slc_dados.remove(0);
-                }
-                slc_dados.style.display = "none";
+                xmlhttp.onload = function () {
+                    var dados = JSON.parse(this.responseText);
+                    dados.forEach(id => {
+                        Produtos.push([id["ProdutoID"], id["NomeProduto"], id["NomeCategoria"], id["Preco"], id["CorNome"], id["Lote"], id["Date"], id["Image"]]);
+                    });
+                    console.log(dados);
 
-                // Cria options do select dados:
-                slc_dados.setAttribute("size", prod.length + 1);
+                    var slc_dados = document.getElementById("slc_prod");
+                    while (slc_dados.options.length > 0) {
+                        slc_dados.remove(0);
+                    }
+                    slc_dados.style.display = "none";
 
-                //Option
-                var option = document.createElement("OPTION");
-                option.setAttribute("value", "");
-                option.setAttribute("disabled", "");
-                option.setAttribute("selected", "");
-                option.text = "Escolha um produto?";
-                slc_dados.appendChild(option);
+                    slc_dados.setAttribute("size", Produtos.length + 1);
+                    var option = document.createElement("OPTION");
+                    option.setAttribute("value", "");
+                    option.setAttribute("disabled", "");
+                    option.setAttribute("selected", "");
+                    option.text = "Escolha um produto?";
+                    slc_dados.appendChild(option);
 
-                prod.forEach(nome => {
-                    var opt = document.createElement("OPTION");
-                    opt.setAttribute("value", nome[0]);
-                    opt.text = nome[1];
-                    slc_dados.appendChild(opt);
-                });
-                slc_dados.style.display = "block";
+                    Produtos.forEach(item => {
+                        var opt = document.createElement("OPTION");
+                        opt.setAttribute("value", item[0]);
+                        opt.text = item[1];
+                        slc_dados.appendChild(opt);
+                    });
+                    slc_dados.style.display = "block";
+                };
+
+                xmlhttp.send();
             }
 
             function DetalhesProd(slc_pord) {
                 var tab = document.getElementById("tab");
-
-                // Seleção do detalhes:
                 var indProd = slc_pord.selectedIndex;
-                var detalheI = slc_pord.options[indProd].value;
-
+                var detalheI = indProd - 1;
                 var spans = tab.querySelectorAll("span");
-                spans[0].innerText=Produtos[detalheI-1][6];
-                spans[1].innerText=Produtos[detalheI-1][3];
-                spans[2].innerText=Produtos[detalheI-1][4];
-                spans[3].innerText=Produtos[detalheI-1][5];
 
-                tab.style.display="block";
+                //ProdutoID, NomeProduto, NomeCategoria, Preco, CorNome, Lote, Date, Imagem
+                spans[0].innerText = Produtos[detalheI][2];//Categoria
+                spans[1].innerText = Produtos[detalheI][3];//Preço
+                spans[2].innerText = Produtos[detalheI][4];//Cor
+                spans[3].innerText = Produtos[detalheI][5];//Lote
+                spans[4].innerText = Produtos[detalheI][6];//Data
+                document.getElementById("tab_img").setAttribute("src", Produtos[detalheI][7]);//Imagem
+                tab.style.display = "block";
             }
 
             var slc_categ = document.getElementById("slc_categ");
             slc_categ.addEventListener("change", function () {
                 criaConteudo(this);
             });
+
             var slc_prod = document.getElementById("slc_prod");
             slc_prod.addEventListener("change", function () {
                 DetalhesProd(this);

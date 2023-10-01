@@ -68,7 +68,7 @@ h6 {
     background-color: #ECEDEF;
 }
 .bar span{
-    width: 25%;
+    min-width: 25%;
     display: block;
     padding: 0px 16px;
     border: none;
@@ -102,6 +102,9 @@ main p{
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 2px 3px 4px #222;
+}
+#tab_preco{
+    font-size: 3em;
 }
 select {
     text-align: center;
