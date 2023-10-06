@@ -100,6 +100,17 @@ main{
     text-align: center!important;
     margin: 10px auto;
 }
-main p{
-    font-size: 15px;
+main table{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+main table tr{
+    background-color: var(--color-tb);
+}
+table tr#th{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+main table th{
+    width: 15%;
 }
