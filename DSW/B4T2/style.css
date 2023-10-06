@@ -17,7 +17,7 @@ html {
 
 body {
     font-family: "Montserrat", Verdana, sans-serif;
-    background: url('./fundo.jpg') !important;
+    background: url('./fundo.jpg') center !important;
     background-size: cover !important;
     font-size: 15px;
     line-height: 1.5;
@@ -103,14 +103,20 @@ main{
 main table{
     margin: 0 auto;
     border-collapse: collapse;
+    width: 80%;
 }
 main table tr{
     background-color: var(--color-tb);
 }
-table tr#th{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
 main table th{
-    width: 15%;
+    width: 5%;
+}
+main table th#tb-l{
+    border-top-left-radius: 10px !important;
+}
+main table th#tb-r{
+    border-top-right-radius: 10px !important;
+}
+main table tr td img{
+    width: 20%;
 }
