@@ -12,8 +12,8 @@
 
 <body>
     <div id="title">
-        <h1>B4T2</h1><br />
-        <h1>Continente e seus Países</h1>
+        <h1>B4T2</h1>
+        <h1 id="T">Continente e Seus Países</h1>
     </div>
     <!-- Menu Suspenso -->
     <nav class="nav_bar" id="nav_bar">
@@ -33,6 +33,19 @@
     </div>
 
     <main>
+
+        <section id="scn_slc">
+            <select id="slc_continentes" onchange="LoadPaises();">
+                <option disabled>Selecione o continente:</option>
+                <option value="North America">America - Norte</option>
+                <option value="South America">America - Sul</option>
+                <option value="Europe">Europa</option>
+                <option value="Africa">África</option>
+                <option value="Asia">Ásia</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </section>
+
         <table id="tb_paises">
             <tr>
                 <th id="tb-l">Nome</th>
@@ -40,13 +53,15 @@
                 <th id="tb-r">Bandeira</th>
             </tr>
         </table>
-        <br/><br/><br/>
+        <br /><br /><br />
     </main>
 
     <script>
-        let Continente = [];
 
         function LoadPaises() {
+
+            let Continente = [];
+
             if (window.XMLHttpRequest) {
                 var xmlhttp = new XMLHttpRequest();
             } else {
@@ -60,14 +75,37 @@
             xmlhttp.onload = function () {
                 if (xmlhttp.status == 200) {
                     var dados = JSON.parse(this.response);
+                    var slc = document.getElementById("slc_continentes");
+                    idSlc = slc.options[slc.selectedIndex].value;
                     dados.forEach(id => {
-                        if (id.continents == "Asia") {
+                        if (id.continents == idSlc) {
                             Continente.push([id.name.common, id.capital, id.flags]);
                         }
                     });
                     console.log(Continente);
 
                     var table = document.getElementById("tb_paises");
+                    table.innerHTML = "";
+
+                    var tdr = document.createElement("tr");
+                    for (let i = 0; i < 3; i++) {
+                        var th = document.createElement("th");
+                        switch (i) {
+                            case 0:
+                                th.innerText = "Nome";
+                                th.setAttribute("id", "tb-l");
+                                break;
+                            case 1:
+                                th.innerText = "Capital";
+                                break;
+                            case 2:
+                                th.innerHTML = "Bandeira";
+                                th.setAttribute("id", "tb-r");
+                                break;
+                        }
+                        tdr.appendChild(th);
+                    }
+                    table.appendChild(tdr);
 
                     Continente.forEach(id => {
                         var tr = document.createElement("tr");
@@ -95,6 +133,7 @@
         }
 
         document.querySelector("body").addEventListener('load', LoadPaises());
+        //document.querySelector("slc_continentes").addEventListener('change', LoadPaises());
     </script>
 </body>
 
