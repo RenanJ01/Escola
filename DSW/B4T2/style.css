@@ -51,7 +51,11 @@ h6 {
     font-weight: bold;
     font-family: cursive;
     margin: 0px auto;
-
+    color: var(--color-6);
+}
+#title h1#T{
+    font-size: 350%;
+    color: var(--color-tp);
 }
 
 /* Menu */
@@ -100,6 +104,24 @@ main{
     text-align: center!important;
     margin: 10px auto;
 }
+
+/*Opções*/
+#scn_slc{
+    margin: 40px auto;
+    width: 50%;
+}
+#slc_continentes{
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--color-tb);
+    width: 65%;
+    border: 0.5px solid var(--color-2);
+    border-radius: 10px;
+    outline: none;
+    color: var(--color-);
+}
+
+/*Tabela*/
 main table{
     margin: 0 auto;
     border-collapse: collapse;
