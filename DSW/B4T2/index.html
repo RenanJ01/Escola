@@ -18,7 +18,6 @@
     <!-- Menu Suspenso -->
     <nav class="nav_bar" id="nav_bar">
         <div class="bar">
-            <a href="./login.php" class="bar_item button">Login</a>
             <a href="./index.html" class="bar_item button">Início</a>
         </div>
     </nav>
@@ -27,24 +26,76 @@
     <div id="aba">
         <h1>Integrantes do Grupo:</h1>
         <p>
-            Nicolas dos Santos Lima - CB3008932 </br>
             Jonatas Renan - CB3008606 </br>
             Eriel de Jesus - CB1990543
             <br>
         </p>
     </div>
-    
+
     <main>
-        <tbody>
-            <table>
-                <tr id="th">
-                    <th>Nome</th>
-                    <th>Continente</th>
-                </tr>
-            </table>
-        </tbody>
+        <table id="tb_paises">
+            <tr>
+                <th id="tb-l">Nome</th>
+                <th>Capital</th>
+                <th id="tb-r">Bandeira</th>
+            </tr>
+        </table>
+        <br/><br/><br/>
     </main>
 
+    <script>
+        let Continente = [];
+
+        function LoadPaises() {
+            if (window.XMLHttpRequest) {
+                var xmlhttp = new XMLHttpRequest();
+            } else {
+                var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlhttp.open("GET", "https://restcountries.com/v3.1/all");
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            // Manipule o JSON somente após o carregamento completo dos dados.
+            xmlhttp.onload = function () {
+                if (xmlhttp.status == 200) {
+                    var dados = JSON.parse(this.response);
+                    dados.forEach(id => {
+                        if (id.continents == "Asia") {
+                            Continente.push([id.name.common, id.capital, id.flags]);
+                        }
+                    });
+                    console.log(Continente);
+
+                    var table = document.getElementById("tb_paises");
+
+                    Continente.forEach(id => {
+                        var tr = document.createElement("tr");
+                        for (let i = 0; i < 3; i++) {
+                            var td = document.createElement("td");
+                            switch (i) {
+                                case 0:
+                                    td.innerText = id[0];
+                                    break;
+                                case 1:
+                                    td.innerText = id[1];
+                                    break;
+                                case 2:
+                                    td.innerHTML = "<img alt='" + id[2].alt + "' src='" + id[2].svg + "'>";
+                                    break;
+                            }
+                            tr.appendChild(td);
+                        }
+                        table.appendChild(tr);
+                    });
+                }
+            };
+
+            xmlhttp.send();
+        }
+
+        document.querySelector("body").addEventListener('load', LoadPaises());
+    </script>
 </body>
 
 </html>
