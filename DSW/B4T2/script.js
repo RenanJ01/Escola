@@ -66,7 +66,7 @@ function LoadPaises() {
 }
 
 // Evento de carregamento da página
-document.body.addEventListener('load', LoadPaises);
+document.body.addEventListener('load', LoadPaises());
 
 // Evento de mudança no select
-document.getElementById("slc_continentes").onchange = function(){LoadPaises};
+document.getElementById("slc_continentes").onchange = function(){LoadPaises()};
