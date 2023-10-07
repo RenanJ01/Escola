@@ -1,34 +1,28 @@
 function LoadPaises() {
+    const Continente = [];
 
-    let Continente = [];
-
-    if (window.XMLHttpRequest) {
-        var xmlhttp = new XMLHttpRequest();
-    } else {
-        var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-
+    const xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", "https://restcountries.com/v3.1/all");
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-    // Manipule o JSON somente após o carregamento completo dos dados.
     xmlhttp.onload = function () {
-        if (xmlhttp.status == 200) {
-            var dados = JSON.parse(this.response);
-            var slc = document.getElementById("slc_continentes");
-            idSlc = slc.options[slc.selectedIndex].value;
-            dados.forEach(id => {
-                if (id.continents == idSlc) {
-                    Continente.push([id.name.common, id.capital, id.flags]);
+        if (xmlhttp.status === 200) {
+            const dados = JSON.parse(this.response);
+            const slc = document.getElementById("slc_continentes");
+            const idSlc = slc.options[slc.selectedIndex].value;
+
+            dados.forEach(country => {
+                if (country.continents === idSlc) {
+                    Continente.push([country.name.common, country.capital, country.flags]);
                 }
             });
 
-            var table = document.getElementById("tb_paises");
+            const table = document.getElementById("tb_paises");
             table.innerHTML = "";
 
-            var tdr = document.createElement("tr");
+            const tdr = document.createElement("tr");
             for (let i = 0; i < 3; i++) {
-                var th = document.createElement("th");
+                const th = document.createElement("th");
                 switch (i) {
                     case 0:
                         th.innerText = "Nome";
@@ -46,19 +40,19 @@ function LoadPaises() {
             }
             table.appendChild(tdr);
 
-            Continente.forEach(id => {
-                var tr = document.createElement("tr");
+            Continente.forEach(country => {
+                const tr = document.createElement("tr");
                 for (let i = 0; i < 3; i++) {
-                    var td = document.createElement("td");
+                    const td = document.createElement("td");
                     switch (i) {
                         case 0:
-                            td.innerText = id[0];
+                            td.innerText = country[0];
                             break;
                         case 1:
-                            td.innerText = id[1];
+                            td.innerText = country[1];
                             break;
                         case 2:
-                            td.innerHTML = "<img alt='" + id[2].alt + "' src='" + id[2].svg + "'>";
+                            td.innerHTML = `<img alt="${country[2].alt}" src="${country[2].svg}">`;
                             break;
                     }
                     tr.appendChild(td);
@@ -71,5 +65,9 @@ function LoadPaises() {
     xmlhttp.send();
 }
 
-document.querySelector("body").addEventListener('load', LoadPaises());
-//document.querySelector("slc_continentes").addEventListener('change', LoadPaises());
+// Evento de carregamento da página
+window.addEventListener('load', LoadPaises);
+
+// Evento de mudança no select
+const slcContinentes = document.getElementById("slc_continentes");
+slcContinentes.addEventListener('change', LoadPaises);
