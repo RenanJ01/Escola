@@ -69,5 +69,5 @@ function LoadPaises() {
 window.addEventListener('load', LoadPaises);
 
 // Evento de mudança no select
-//const slcContinentes = document.getElementById("slc_continentes");
-//slcContinentes.addEventListener('change', LoadPaises);
+const slcContinentes = document.getElementById("slc_continentes");
+slcContinentes.addEventListener('change', LoadPaises);
