@@ -1,0 +1,144 @@
+* {
+    --color-tb: #F0F0F2;
+    --color-tp: #021826;
+    --color-1: #45858C;
+    --color-2: #323859;
+    --color-3: #0f557e;
+    --color-4: #AAA3D9;
+    --color-5: #94E1F2;
+    --color-6: #F29985;
+
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Montserrat", Verdana, sans-serif;
+    background: url('./fundo.jpg') center !important;
+    background-size: cover !important;
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+}
+
+body,
+html {
+    background: linear-gradient(45deg, var(--color-3), #30a4c7);
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    margin: 10px auto;
+    text-align: center;
+}
+
+/* Título */
+#title{
+    padding: 20px 0;
+}
+#title h1{
+    font-weight: bold;
+    font-family: cursive;
+    margin: 0px auto;
+    color: var(--color-6);
+}
+#title h1#T{
+    font-size: 350%;
+    color: var(--color-tp);
+}
+
+/* Menu */
+.nav_bar .bar {
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    background-color: var(--color-tb);
+    border: 2px solid var(--color-tp);
+    border-radius: 2em;
+}
+.nav_bar .bar_item {
+    width: 25%;
+    display: block;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: small;
+    border: none;
+    float: left;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-3);
+    background-color: var(--color-tb);
+}
+.bar_item:hover{
+    color:var(--color-tb);
+    background-color: var(--color-1);
+}
+
+/* Grupo */
+#aba{
+    text-align: center;
+    padding: 10px 0;
+    margin: 40px auto;
+    background-color: var(--color-5);
+    width: 65%;
+    border-radius: 20px;
+    box-shadow: -3px 1px 2px var(--color-2);
+}
+
+/* Principal */
+main{
+    padding: 32px auto;
+    text-align: center!important;
+    margin: 10px auto;
+}
+
+/*Opções*/
+#scn_slc{
+    margin: 40px auto;
+    width: 50%;
+}
+#slc_continentes{
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--color-tb);
+    width: 65%;
+    border: 0.5px solid var(--color-2);
+    border-radius: 10px;
+    outline: none;
+    color: var(--color-);
+}
+
+/*Tabela*/
+main table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+main table tr{
+    background-color: var(--color-tb);
+}
+main table th{
+    width: 5%;
+}
+main table th#tb-l{
+    border-top-left-radius: 10px !important;
+}
+main table th#tb-r{
+    border-top-right-radius: 10px !important;
+}
+main table tr td img{
+    width: 20%;
+}
