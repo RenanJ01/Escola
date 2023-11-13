@@ -1,0 +1,101 @@
+* {
+    --color-tb: #F0F0F2;
+    --color-tp: #333333 ;
+    --color-c1: #74B841;
+    --color-fd: #F4EFE7;
+    --color-c2: #E85656;
+
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Montserrat", Verdana, sans-serif;
+    background: url('../Midia/fundo.jpg') center !important;
+    image-rendering: optimizeQuality;    
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+}
+
+body, html {
+    background: var(--color-fd);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#article{
+    width: 75% !important;
+    background-color: var(--color-fd) !important;
+    margin: 0 auto !important;
+    border-radius: 10px !important;
+}
+
+/* Menu */
+.nav_bar .bar {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: var(--color-c1);
+    margin: 0 auto;
+}
+
+.nav_bar .bar_item {
+    width: 25%;
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-tb);
+    background-color: var(--color-c1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.bar_item:hover{
+    color:var(--color-tp);
+    background-color: var(--color-fd);
+}
+.bar span{
+    width: 25%;
+    display: block;
+    padding: 0px 16px;
+    border: none;
+    float: left;
+    text-decoration: none;
+    color: var(--color-tp);
+    font-family: fantasy;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 26px;
+}
+
+/* Grupo */
+#grupo{
+    text-align: center;
+    padding-top: 50px;
+}
+
+main{
+    padding: 32px auto;
+    text-align: center!important;
+    margin: 10px auto;
+}
+main p{
+    font-size: 15px;
+}
