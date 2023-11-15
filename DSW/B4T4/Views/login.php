@@ -1,9 +1,10 @@
+
 <?php
 session_start();
 
 if (isset($_POST['login'])) {
-    $login_db = $Email;
-    $senha_db = $Senha;
+    $login_db = $email_login;
+    $senha_db = $senha_login;
     $erros = array();
     $login = $_POST['login'];
     $senha = $_POST['senha'];
@@ -19,9 +20,11 @@ if (isset($_POST['login'])) {
     }
 }
 ?>
-
+<head>
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/B4T4/css/login.css">
+</head>
 <div class="login-container">
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" class="login-form">
+    <form action="http://localhost:8080/B4T4/login" method="POST" class="login-form">
         <h1>Login</h1>
         <div class="input-container">
             <input type="email" placeholder="Email" name="login" required>

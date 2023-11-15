@@ -3,8 +3,8 @@ class Login
 {
     public function getDadosLogin()
     {
-        $db["Email"] = 'trabalho@dsw.ifsp';
-        $db["Senha"] = '123456'; 
+        $db["email_login"] = 'trabalho@dsw.ifsp';
+        $db["senha_login"] = '123456'; 
         return $db;
     }
 }

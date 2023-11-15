@@ -1,0 +1,25 @@
+/*Tabela*/
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+table tr{
+    background-color: var(--color-fd);
+}
+table th{
+    width: 5%;
+    color: var(--color-tp);
+    font-weight: bold;
+}
+table th#tb-l{
+    border-top-left-radius: 10px !important;
+}
+table th#tb-r{
+    border-top-right-radius: 10px !important;
+}
+table tr td {
+    width: 20%;
+    padding: 2px 5px;
+    border-bottom: 1px solid var(--color-c2);
+}

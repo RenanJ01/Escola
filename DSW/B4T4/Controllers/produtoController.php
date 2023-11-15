@@ -1,21 +1,25 @@
 <?php
-Class produtoController extends Controller {
-public function index() // Método default (opcional)
+class produtoController extends Controller
 {
-// 1) Chamar um Model (opcional)
-$prod = new Produto();
-$dados = $prod->getDadosProduto();
-// 2) Chamar a View (obrigatório)
-$this->carregarTemplate('produto', $dados);
-}
-public function produtoPreco()
-{
-// 1) Chamar um Model (opcional)
-$prod = new Produto();
-$dados = $prod->getDadosProduto();
-// 2) Chamar a View (obrigatório)
-$this->carregarTemplate('produtoPreco', $dados);
-}
-}
+    public function index()
+    {
+        // 1) Chamar o Model
+        $prod = new Produto();
+        $dados = $prod->getDadosProduto();
+        // 2) Chamar a View
+        $this->carregarTemplate('produto', $dados);
+    }
 
-?>
+    public function detalhe()
+    {
+        // 1) Chamar o Model
+        $prod = new Produto();
+
+        //Processo para ter o codígo do produto
+        $url_array = explode('/', htmlentities(addslashes($_GET['pag'])));
+        $dados = $prod->getDadosProdutoItem($url_array[2]);
+
+        // 2) Chamar o View
+        $this->carregarTemplate('produtoDetalhe', $dados);
+    }
+}

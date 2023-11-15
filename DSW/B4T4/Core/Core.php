@@ -18,7 +18,7 @@ class Core
         $controller = '';
         $metodo = '';
         $parametros = array();
-        
+
         if (isset($_GET['pag'])) {
             $url = htmlentities(addslashes($_GET['pag']));
         }
@@ -28,7 +28,7 @@ class Core
         {
             // Separa os elementos da URL delimitados por '/' em um array
             $url_array = explode('/', $url);
-
+            
             // Captura a classe constante na URL (1o elemento após o domínio)
             $classe = $url_array[0];
             $controller = $classe . 'Controller';

@@ -9,7 +9,7 @@
         <?php echo $Senha ?>
     </p>
 
-    <a href="login">Login</a>
-    <a href="produto/produtoPreco">Preço</a>
+    <a  class="links" href="login">Login</a><br><br>
+    <a  class="links" href="logout">Logout</a>
     <br />
 </div>
